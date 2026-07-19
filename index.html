@@ -3,386 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catchhub - Watch. Communicate. Create.</title>
-    <!-- Font Awesome Icons for exact outlined layout matching -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* --- Clean Global Base Reset --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f7f7f7;
-            color: #333333;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 40px;
-            position: relative;
-            z-index: 5;
-        }
-
-        /* --- Pixel Perfect Layout Engine --- */
-        .section-row {
-            display: table;
-            width: 100%;
-            table-layout: fixed;
-            margin: 0;
-            padding: 40px 0;
-        }
-
-        .left-col, .right-col {
-            display: table-cell;
-            vertical-align: middle;
-            width: 50%;
-        }
-
-        /* --- Typography Exact Scaling --- */
-        .brand-logo {
-            max-width: 260px;
-            height: auto;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .main-tagline {
-            font-size: 2.1rem;
-            font-weight: 900;
-            color: #111111;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-            line-height: 1.2;
-        }
-
-        .sub-tagline {
-            font-size: 1.3rem;
-            color: #777777;
-            margin-bottom: 25px;
-            font-weight: 500;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: #111111;
-            letter-spacing: 3px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .section-desc {
-            font-size: 1.35rem;
-            line-height: 1.6;
-            color: #666666;
-            font-weight: 400;
-        }
-
-        /* Side Alignment Fixes */
-        .padding-left-text {
-            padding-left: 60px;
-            text-align: left;
-        }
-
-        .padding-right-text {
-            padding-right: 40px;
-            text-align: left;
-        }
-
-        .messages-text-block {
-            text-align: left;
-            padding-right: 60px;
-        }
-
-        /* --- Mockups Scale Control --- */
-        .img-wrapper {
-            display: block;
-            text-align: center;
-            position: relative;
-        }
-
-        .mockup-img {
-            max-width: 100%;
-            height: auto;
-            filter: drop-shadow(0px 15px 25px rgba(0,0,0,0.08));
-        }
-
-        .max-width-mockup {
-            max-width: 90%;
-        }
-
-        /* --- LOGO BADGES: Force Override Filter For Exact Colors --- */
-        .badge-container {
-            margin-top: 20px;
-            display: flex;
-            gap: 15px;
-        }
-
-        .original-store-link {
-            display: inline-block;
-            transition: transform 0.2s ease;
-        }
-
-        .original-store-link:hover {
-            transform: translateY(-2px);
-        }
-
-        .store-img-badge {
-            height: 48px;
-            width: auto;
-            display: block;
-            /* Force reset any external CSS filters/grayscales completely */
-            filter: grayscale(0%) !important;
-            -webkit-filter: grayscale(0%) !important;
-            opacity: 1 !important;
-        }
-
-        /* --- IN FUTURE ICONS (EXACT SHAPE & COLOR MATCH) --- */
-        .future-features-bar {
-            display: flex;
-            gap: 18px;
-            margin-bottom: 20px;
-            align-items: center;
-        }
-
-        .feature-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #999999;
-            font-size: 0.78rem;
-            font-weight: 600;
-        }
-
-        .feature-item i {
-            font-size: 1.2rem;
-            margin-bottom: 6px;
-            width: 44px;
-            height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #ffffff;
-            border: 1px solid #eaeaea;
-            border-radius: 50%;
-            color: #a0a0a0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-            transition: all 0.2s ease;
-        }
-
-        /* --- REAL WAVE STYLE BACKGROUND LAYERS --- */
-        .section-wrapper {
-            position: relative;
-            background-color: #ffffff;
-            padding: 50px 0;
-        }
-
-        /* Hero Wave (Curved Bottom) */
-        .hero-section {
-            background: #fdfdfd;
-            background: linear-gradient(180deg, #ffffff 0%, #ebebeb 100%);
-            padding: 50px 0 90px 0;
-            border-bottom-left-radius: 50% 40px;
-            border-bottom-right-radius: 50% 40px;
-        }
-
-        /* Channels Wave Segment */
-        .channels-section {
-            background: #ffffff;
-            /* Subtle wave gradient blend */
-            background: linear-gradient(145deg, #ffffff 30%, #f0f0f0 70%, #ffffff 100%);
-        }
-
-        /* Messages Wave Segment */
-        .messages-section {
-            background: #ffffff;
-            background: linear-gradient(215deg, #ffffff 20%, #ececec 60%, #ffffff 100%);
-        }
-
-        /* In Future Segment */
-        .future-section {
-            background: #ffffff;
-            background: linear-gradient(145deg, #ffffff 40%, #f2f2f2 80%, #ffffff 100%);
-        }
-
-        /* --- Clean & Centered Footer --- */
-        .footer-section {
-            background: #ffffff;
-            padding: 60px 0 30px 0;
-            text-align: center;
-            border-top: 1px solid #f0f0f0;
-        }
-
-        .download-text {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #111111;
-            margin-bottom: 20px;
-        }
-
-        .central-badges {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .contact-text {
-            font-size: 1.15rem;
-            color: #666666;
-            margin-bottom: 25px;
-        }
-
-        .contact-link {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .footer-logo-wrapper {
-            margin-top: 20px;
-        }
-
-        .footer-company-logo {
-            max-width: 40px;
-            height: auto;
-        }
-
-        /* --- Mobile Optimization --- */
-        @media (max-width: 768px) {
-            .section-row, .left-col, .right-col {
-                display: block !important;
-                width: 100% !important;
-                text-align: center !important;
-            }
-            .left-col {
-                margin-bottom: 35px;
-            }
-            .padding-left-text, .padding-right-text, .messages-text-block {
-                padding: 0 !important;
-                text-align: center !important;
-            }
-            .badge-container, .central-badges, .future-features-bar {
-                justify-content: center;
-            }
-            .hero-section .section-row {
-                display: flex !important;
-                flex-direction: column-reverse;
-            }
-            .brand-logo {
-                margin: 0 auto 20px auto;
-            }
-        }
-    </style>
+    <title>Catchub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- SECTION 1: HERO -->
-    <div class="section-wrapper hero-section">
-        <div class="container">
-            <div class="section-row">
-                <div class="left-col padding-right-text">
-                    <img src="images/logo.png" alt="Catchhub Logo" class="brand-logo">
-                    <h1 class="main-tagline">WATCH. COMMUNICATE. CREATE.</h1>
-                    <p class="sub-tagline">Everything you need to socialise</p>
-                    <div class="badge-container">
-                        <!-- Pure Original badged assets forced with 0% grayscale to fix graying issue -->
-                        <a href="#" class="original-store-link"><img src="images/btn_android.png" alt="Available on Android App Store" class="store-img-badge"></a>
-                        <a href="#" class="original-store-link"><img src="images/btn_apple.png" alt="Download on the App Store" class="store-img-badge"></a>
-                    </div>
-                </div>
-                <div class="right-col">
-                    <div class="img-wrapper">
-                        <img src="images/hero_phones.png" alt="Catchhub App" class="mockup-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container">
 
-    <!-- SECTION 2: CHANNELS -->
-    <div class="section-wrapper channels-section">
-        <div class="container">
-            <div class="section-row">
-                <div class="left-col">
-                    <div class="img-wrapper">
-                        <img src="images/channels_phones.png" alt="Channels" class="mockup-img max-width-mockup">
-                    </div>
-                </div>
-                <div class="right-col padding-left-text">
-                    <h2 class="section-title">CHANNELS</h2>
-                    <p class="section-desc">Enjoy the videos and music you love. Create your own business or entertainment channel.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="left">
+            <h1>Catchub</h1>
+            <h2>WATCH. COMMUNICATE. CREATE.</h2>
+            <p>Everything you need to socialise</p>
 
-    <!-- SECTION 3: MESSAGES -->
-    <div class="section-wrapper messages-section">
-        <div class="container">
-            <div class="section-row">
-                <div class="left-col messages-text-block">
-                    <h2 class="section-title">MESSAGES</h2>
-                    <p class="section-desc">Communicate seamlessly. Create your own professional or social group chat</p>
-                </div>
-                <div class="right-col">
-                    <div class="img-wrapper">
-                        <img src="images/messages_phones.png" alt="Messages" class="mockup-img max-width-mockup">
-                    </div>
-                </div>
+            <div class="buttons">
+                <img src="images/android.png" alt="">
+                <img src="images/apple.png" alt="">
             </div>
         </div>
-    </div>
 
-    <!-- SECTION 4: IN FUTURE -->
-    <div class="section-wrapper future-section">
-        <div class="container">
-            <div class="section-row">
-                <div class="left-col">
-                    <div class="img-wrapper">
-                        <img src="images/future_phones.png" alt="In Future" class="mockup-img max-width-mockup">
-                    </div>
-                </div>
-                <div class="right-col padding-left-text">
-                    <!-- EXACT IN FUTURE ICONS BLOCK WITH SHADOW ROUNDED BORDERS -->
-                    <div class="future-features-bar">
-                        <div class="feature-item"><i class="fa-solid fa-gamepad"></i>Games</div>
-                        <div class="feature-item"><i class="fa-solid fa-users"></i>Party</div>
-                        <div class="feature-item"><i class="fa-solid fa-video"></i>Video</div>
-                        <div class="feature-item"><i class="fa-solid fa-heart"></i>Love</div>
-                        <div class="feature-item"><i class="fa-solid fa-house"></i>Housing</div>
-                        <div class="feature-item"><i class="fa-solid fa-utensils"></i>Foods</div>
-                    </div>
-                    
-                    <h2 class="section-title">IN FUTURE</h2>
-                    <p class="section-desc">Communicate seamlessly. Create your own professional or social group chat</p>
-                </div>
-            </div>
+        <div class="right">
+            <img src="images/phones1.png" alt="">
         </div>
-    </div>
+    </section>
 
-    <!-- SECTION 5: FOOTER -->
-    <footer class="footer-section">
-        <div class="container">
-            <p class="download-text">For download click here:</p>
-            <div class="central-badges">
-                <a href="#" class="original-store-link"><img src="images/btn_android.png" alt="Android Store" class="store-img-badge"></a>
-                <a href="#" class="original-store-link"><img src="images/btn_apple.png" alt="Apple Store" class="store-img-badge"></a>
-            </div>
-            <p class="contact-text">Any questions? Feel free to <a href="#" class="contact-link">CONTACT US</a></p>
-            <div class="footer-logo-wrapper">
-                <img src="images/peratude_logo.png" alt="Peratude Logo" class="footer-company-logo">
-            </div>
+    <!-- Channels -->
+    <section class="section">
+        <div class="image">
+            <img src="images/phones2.png" alt="">
         </div>
+
+        <div class="text">
+            <h2>CHANNELS</h2>
+            <p>Enjoy the videos and music you love.
+                Create your own business
+                or entertainment channel.</p>
+        </div>
+    </section>
+
+    <!-- Messages -->
+    <section class="section reverse">
+
+        <div class="text">
+            <h2>MESSAGES</h2>
+            <p>Communicate seamlessly.
+                Create your own professional
+                or social group chat.</p>
+        </div>
+
+        <div class="image">
+            <img src="images/phones3.png" alt="">
+        </div>
+
+    </section>
+
+    <!-- Future -->
+    <section class="section">
+
+        <div class="image">
+            <img src="images/phones4.png" alt="">
+        </div>
+
+        <div class="text">
+            <h2>IN FUTURE</h2>
+            <p>Communicate seamlessly.
+                Create your own professional
+                or social group chat.</p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>For download click here:</h3>
+
+        <div class="buttons">
+            <img src="images/android.png" alt="">
+            <img src="images/apple.png" alt="">
+        </div>
+
+        <p>Any questions? Feel free to <a href="#">CONTACT US</a></p>
+
+        <img src="images/logo.png" alt="" class="footer-logo">
+
     </footer>
+
+</div>
 
 </body>
 </html>
