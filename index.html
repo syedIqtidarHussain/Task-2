@@ -27,7 +27,7 @@
             padding: 0 40px;
         }
 
-        /* --- EXACT LAYOUT STRUCTURE (TABLE STYLE FOR PERFECT ALIGNMENT) --- */
+        /* --- LAYOUT STRUCTURE --- */
         .section-row {
             display: table;
             width: 100%;
@@ -75,18 +75,28 @@
             font-size: 1.15rem;
             line-height: 1.6;
             color: #777777;
-            max-width: 450px;
         }
 
-        /* Text alignments based on your exact image */
+        /* Text alignments matching original perfectly */
         .text-left-align {
             text-align: left;
             padding-right: 40px;
         }
 
         .text-right-align {
-            text-align: left; /* Text contents align left inside their block */
+            text-align: left; 
             padding-left: 60px;
+        }
+
+        /* FIX: Messages text center aligned */
+        .text-center-block {
+            text-align: center;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+        .text-center-block .section-desc {
+            margin: 0 auto;
+            max-width: 420px;
         }
 
         /* --- Mockup Centering --- */
@@ -104,7 +114,7 @@
             max-width: 85%;
         }
 
-        /* --- Fix Store Badges Colors --- */
+        /* --- FIX: Store Badges Real Colors & Icons --- */
         .badge-container {
             margin-top: 15px;
         }
@@ -112,24 +122,30 @@
         .store-link {
             display: inline-block;
             margin-right: 12px;
-            border-radius: 8px;
+            border-radius: 6px;
             overflow: hidden;
             vertical-align: middle;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .store-badge {
-            height: 45px;
+            height: 42px;
             width: auto;
             display: block;
+            padding: 4px 12px;
+            object-fit: contain;
         }
 
-        /* Applying accurate background colors directly to the images */
+        /* Play store accurate green background and making icon crisp */
         img[src*="btn_android"] {
             background-color: #a4c639 !important;
+            filter: invert(1) brightness(10); /* Inverts dark grey to solid white icon/text */
         }
 
+        /* App store accurate black background and making icon crisp */
         img[src*="btn_apple"] {
             background-color: #000000 !important;
+            filter: invert(1) brightness(10); /* Inverts dark grey to solid white icon/text */
         }
 
         /* --- Wave Sections Styling --- */
@@ -205,7 +221,7 @@
             height: auto;
         }
 
-        /* --- Responsive Layout for Mobile Phones --- */
+        /* --- Mobile Responsiveness --- */
         @media (max-width: 768px) {
             .section-row, .left-col, .right-col {
                 display: block !important;
@@ -215,14 +231,13 @@
             .left-col {
                 margin-bottom: 40px;
             }
-            .text-left-align, .text-right-align {
+            .text-left-align, .text-right-align, .text-center-block {
                 padding: 0 !important;
                 text-align: center !important;
             }
             .section-desc {
                 margin: 0 auto;
             }
-            /* Hero reverse layout on mobile */
             .hero-section .section-row {
                 display: flex !important;
                 flex-direction: column-reverse;
@@ -232,7 +247,7 @@
 </head>
 <body>
 
-    <!-- SECTION 1: HERO (Text Left, Image Right) -->
+    <!-- SECTION 1: HERO -->
     <div class="section-wrapper hero-section">
         <div class="container">
             <div class="section-row">
@@ -271,14 +286,13 @@
         </div>
     </div>
 
-    <!-- SECTION 3: MESSAGES (Text Left, Image Right) -->
+    <!-- SECTION 3: MESSAGES (Text Centre-Aligned Left Column, Image Right Column) -->
     <div class="section-wrapper messages-section">
         <div class="container">
             <div class="section-row">
-                <!-- Image aur Text Columns ko flip kar diya taake exact image jaisa ho jaye -->
-                <div class="left-col text-left-align" style="padding-left: 60px;">
-                    <h2 class="section-title" style="text-align: center; max-width: 450px;">MESSAGES</h2>
-                    <p class="section-desc" style="text-align: center; max-width: 450px;">Communicate seamlessly. Create your own professional or social group chat</p>
+                <div class="left-col text-center-block">
+                    <h2 class="section-title">MESSAGES</h2>
+                    <p class="section-desc">Communicate seamlessly. Create your own professional or social group chat</p>
                 </div>
                 <div class="right-col">
                     <div class="img-wrapper">
