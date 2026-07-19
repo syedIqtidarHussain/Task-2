@@ -15,24 +15,24 @@
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: #ffffff;
-            color: #333333;
+            color: #222222;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
 
         .container {
             width: 100%;
-            max-width: 1140px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 30px;
         }
 
-        /* --- REDUCED GAPS: Sections Ooper Shift Karne Ke Liye --- */
+        /* --- STRICTOR COMPACT GAPS: Ek dum tight spacing --- */
         .section-row {
             display: table;
             width: 100%;
             table-layout: fixed;
-            margin: 30px 0; /* Margins ko 80px se kam karke 30px kar diya */
+            margin: 15px 0; /* Boht kam margin taake space khatam ho */
         }
 
         .left-col, .right-col {
@@ -41,30 +41,30 @@
             width: 50%;
         }
 
-        /* --- Typography --- */
+        /* --- TEXT SIZE BARA KAR DIYA --- */
         .brand-logo {
-            max-width: 200px;
+            max-width: 240px;
             height: auto;
             margin-bottom: 15px;
         }
 
         .main-tagline {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #111111;
+            font-size: 1.8rem; /* Font bada kar diya */
+            font-weight: 800;
+            color: #000000;
             letter-spacing: 0.5px;
             margin-bottom: 6px;
         }
 
         .sub-tagline {
-            font-size: 1.05rem;
-            color: #888888;
+            font-size: 1.2rem;
+            color: #666666;
             margin-bottom: 20px;
         }
 
         .section-title {
-            font-size: 1.35rem;
-            font-weight: 700;
+            font-size: 1.7rem; /* Heading mazeed badi aur bold */
+            font-weight: 800;
             color: #111111;
             letter-spacing: 2px;
             margin-bottom: 12px;
@@ -72,34 +72,35 @@
         }
 
         .section-desc {
-            font-size: 1.1rem;
+            font-size: 1.3rem; /* Description text bada kar diya */
             line-height: 1.5;
-            color: #777777;
+            color: #555555;
+            font-weight: 500;
         }
 
-        /* Exact Alignments from Original Picture */
+        /* Side Alignments */
         .padding-left-text {
-            padding-left: 60px;
+            padding-left: 50px;
             text-align: left;
         }
 
         .padding-right-text {
-            padding-right: 40px;
+            padding-right: 30px;
             text-align: left;
         }
 
-        /* MESSAGES: Centered Block on the Left Column */
+        /* MESSAGES: Perfect Center Block */
         .messages-text-block {
             text-align: center;
-            padding-right: 40px;
-            padding-left: 40px;
+            padding-right: 30px;
+            padding-left: 30px;
         }
         .messages-text-block .section-desc {
             margin: 0 auto;
-            max-width: 420px;
+            max-width: 460px;
         }
 
-        /* --- Image Wrapper --- */
+        /* --- Mockups --- */
         .img-wrapper {
             display: block;
             text-align: center;
@@ -111,10 +112,10 @@
         }
 
         .max-width-mockup {
-            max-width: 82%;
+            max-width: 88%;
         }
 
-        /* --- ORIGINAL IMAGE LOGOS (Fixed Image Links) --- */
+        /* --- Original Style Badges --- */
         .badge-container {
             margin-top: 15px;
         }
@@ -126,12 +127,12 @@
         }
 
         .store-badge {
-            height: 40px; /* Original design size */
+            height: 45px;
             width: auto;
             display: block;
         }
 
-        /* --- Section Dynamic Paddings --- */
+        /* --- Section Control --- */
         .section-wrapper {
             position: relative;
             background-color: #ffffff;
@@ -139,31 +140,31 @@
 
         .hero-section {
             background: linear-gradient(180deg, #fafafa 0%, #f4f4f4 100%);
-            padding: 50px 0 80px 0; /* Padding kam kar di takay ooper push ho */
+            padding: 40px 0 60px 0; /* Padding bilkul tight */
             border-bottom-left-radius: 50% 30px;
             border-bottom-right-radius: 50% 30px;
         }
 
         .channels-section, .messages-section, .future-section {
-            padding: 25px 0; /* Tight vertical padding */
+            padding: 10px 0; /* Bilkul minimal space vertical */
         }
 
         /* --- Footer --- */
         .footer-section {
             background: #ffffff;
-            padding: 50px 0 30px 0;
+            padding: 40px 0 20px 0;
             text-align: center;
         }
 
         .download-text {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: #333333;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #111111;
             margin-bottom: 15px;
         }
 
         .central-badges {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .central-badges .store-link {
@@ -171,15 +172,15 @@
         }
 
         .contact-text {
-            font-size: 0.95rem;
-            color: #888888;
-            margin-bottom: 25px;
+            font-size: 1.1rem;
+            color: #666666;
+            margin-bottom: 20px;
         }
 
         .contact-link {
             color: #3498db;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .footer-logo-wrapper {
@@ -187,11 +188,11 @@
         }
 
         .footer-company-logo {
-            max-width: 30px;
+            max-width: 35px;
             height: auto;
         }
 
-        /* --- Mobile Responsive Layout --- */
+        /* --- Mobile Layout --- */
         @media (max-width: 768px) {
             .section-row, .left-col, .right-col {
                 display: block !important;
@@ -199,7 +200,7 @@
                 text-align: center !important;
             }
             .left-col {
-                margin-bottom: 30px;
+                margin-bottom: 25px;
             }
             .padding-left-text, .padding-right-text, .messages-text-block {
                 padding: 0 !important;
@@ -226,8 +227,8 @@
                     <h1 class="main-tagline">WATCH. COMMUNICATE. CREATE.</h1>
                     <p class="sub-tagline">Everything you need to socialise</p>
                     <div class="badge-container">
-                        <a href="#" class="store-link"><img src="images/btn_android.png" alt="Available on Android App Store" class="store-badge"></a>
-                        <a href="#" class="store-link"><img src="images/btn_apple.png" alt="Download on the App Store" class="store-badge"></a>
+                        <a href="#" class="store-link"><img src="images/btn_android.png" alt="Android Store" class="store-badge"></a>
+                        <a href="#" class="store-link"><img src="images/btn_apple.png" alt="Apple Store" class="store-badge"></a>
                     </div>
                 </div>
                 <div class="right-col">
