@@ -100,6 +100,31 @@ body {
     max-width: 95%;     
 }
 
+/* --- IMAGE BADGES COLOR ASSURANCE --- */
+.badge-container {
+    margin-top: 12px;
+    display: flex;
+    gap: 15px;
+}
+
+.central-badges { 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    margin-bottom: 15px; 
+}
+
+/* Yeh rule aapki image ke fikey color (grayscale) ko zor zabardasti khatam kar k original color laye ga */
+.store-img-badge {
+    height: 46px;
+    width: auto;
+    display: block;
+    filter: none !important;
+    -webkit-filter: grayscale(0%) !important;
+    filter: grayscale(0%) !important;
+    opacity: 1 !important;
+}
+
 /* --- IN FUTURE ICONS --- */
 .future-features-bar {
     display: flex;
@@ -160,80 +185,6 @@ body {
 
 .future-section { 
     background: linear-gradient(145deg, #ffffff 40%, #f2f2f2 80%, #ffffff 100%); 
-}
-
-/* --- CSS For Perfect Real Badge Colors --- */
-.badge-container {
-    margin-top: 12px;
-    display: flex;
-    gap: 15px;
-}
-
-.central-badges { 
-    display: flex; 
-    justify-content: center; 
-    gap: 15px; 
-    margin-bottom: 15px; 
-}
-
-.custom-store-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    min-width: 155px;
-    height: 46px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-}
-
-.custom-store-btn:hover {
-    transform: translateY(-2px);
-}
-
-/* Android Green Color Override */
-.android-btn {
-    background-color: #A4C639 !important; 
-    color: #ffffff !important;
-}
-
-/* Apple Black Color Override */
-.apple-btn {
-    background-color: #000000 !important;
-    color: #ffffff !important;
-}
-
-.custom-store-btn i {
-    font-size: 1.7rem;
-    margin-right: 10px;
-    color: #ffffff !important;
-}
-
-.btn-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-    text-align: left;
-}
-
-.btn-text span {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2px;
-    color: #ffffff !important;
-    opacity: 0.9;
-}
-
-.btn-text strong {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #ffffff !important;
-}
-
-.central-badges .custom-store-btn {
-    margin: 0 5px;
 }
 
 /* --- Compact Footer --- */
