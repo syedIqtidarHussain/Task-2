@@ -20,185 +20,178 @@ body {
     padding: 0 40px;
 }
 
-/* --- Exact Section Layouts --- */
+/* --- Flexible Row Layout --- */
 .row-layout {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-}
-
-/* CSS Grid forcing the text to the right for Channels & Future */
-.channels-section .row-layout,
-.future-section .row-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.channels-section .text-content,
-.future-section .text-content {
-    grid-column: 2;
-    justify-self: start;
-    text-align: left;
-    padding-left: 20px;
-}
-
-.channels-section .image-content,
-.future-section .image-content {
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: center;
-}
-
-/* CSS Grid forcing the text to the left for Messages */
-.messages-section .row-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.messages-section .text-content {
-    grid-column: 1;
-    justify-self: start;
-    text-align: left;
-}
-
-.messages-section .image-content {
-    grid-column: 2;
-    justify-self: center;
+    gap: 50px;
 }
 
 .text-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* --- Reusable Image Typography & Styling --- */
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Exact Alignment Handling (Alternating Sections) --- */
+
+/* CHANNELS: Image Left, Text Right */
+.channels-section .row-layout {
+    flex-direction: row;
+}
+.channels-section .text-content {
+    padding-left: 50px;
+    text-align: left;
+}
+
+/* MESSAGES: Text Left, Image Right */
+.messages-section .row-layout {
+    flex-direction: row-reverse;
+}
+.messages-section .text-content {
+    padding-right: 50px;
+    text-align: left;
+}
+
+/* IN FUTURE: Image Left, Text Right */
+.future-section .row-layout {
+    flex-direction: row;
+}
+.future-section .text-content {
+    padding-left: 50px;
+    text-align: left;
+}
+
+/* --- Typography Styling --- */
 .brand-logo {
-    max-width: 200px;
+    max-width: 220px;
     height: auto;
     margin-bottom: 25px;
 }
 
 .main-tagline {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #222222;
-    letter-spacing: 0.8px;
-    margin-bottom: 8px;
-}
-
-.sub-tagline {
-    font-size: 1rem;
-    color: #888888;
-    margin-bottom: 30px;
-}
-
-.section-title {
     font-size: 1.5rem;
     font-weight: 700;
     color: #222222;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.sub-tagline {
+    font-size: 1.1rem;
+    color: #888888;
+    margin-bottom: 35px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #222222;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
 .section-desc {
-    font-size: 1.15rem;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 1.5;
     color: #888888;
-    max-width: 440px;
+    max-width: 480px;
 }
 
-/* --- App Store Badges with Fixed Colors --- */
+/* --- Colored App Store Badges Fix --- */
 .badge-container {
     display: flex;
     gap: 15px;
+    margin-top: 10px;
 }
 
 .store-badge {
-    height: 44px;
+    height: 46px;
+    width: auto;
     object-fit: contain;
-    border-radius: 8px;
-    padding: 2px;
+    border-radius: 6px;
     transition: transform 0.2s ease;
+    display: block;
 }
 
-/* Android Badge Background Color (Green) */
+/* Android Badge Settings (Asli Green Color) */
 img[src*="btn_android"] {
-    background-color: #a4c639; 
-    border: 1px solid #a4c639;
+    background-color: #a4c639;
+    padding: 6px 12px;
+    filter: brightness(0) invert(1); /* Logo text ko white karne ke liye */
 }
 
-/* Apple Badge Background Color (Black) */
+/* Apple Badge Settings (Solid Black Color) */
 img[src*="btn_apple"] {
     background-color: #000000;
-    border: 1px solid #000000;
+    padding: 6px 12px;
+    filter: brightness(0) invert(1); /* Logo text ko white karne ke liye */
 }
 
 .store-badge:hover {
     transform: translateY(-2px);
 }
 
-/* --- Mockup Specific Styling --- */
+/* --- Mockups Dimensions --- */
 .mockup-img {
     max-width: 100%;
     height: auto;
-    filter: drop-shadow(0px 20px 40px rgba(0,0,0,0.06));
 }
 
 .max-width-mockup {
-    max-width: 85%;
+    max-width: 90%;
 }
 
-/* --- Wave Shapes Backgrounds --- */
+/* --- Smooth Wavy Background Sections --- */
 .section {
-    padding: 140px 0;
+    padding: 120px 0;
     position: relative;
     background-color: #ffffff;
 }
 
 .hero-section {
-    background: linear-gradient(180deg, #fbfbfb 0%, #f6f6f6 100%);
+    background: linear-gradient(180deg, #fbfbfb 0%, #f5f5f5 100%);
     padding-top: 100px;
-    padding-bottom: 200px;
-    clip-path: ellipse(130% 75% at 40% 22%);
-}
-
-.hero-section .row-layout {
-    display: flex;
+    padding-bottom: 180px;
+    clip-path: ellipse(120% 75% at 40% 22%);
 }
 
 .hero-text {
-    flex: 1.2;
-}
-
-.hero-image {
-    flex: 0.8;
+    margin-top: -20px;
 }
 
 .channels-section {
-    padding-top: 40px;
-    padding-bottom: 180px;
-    background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
-    clip-path: ellipse(140% 70% at 70% 25%);
+    padding-top: 50px;
+    padding-bottom: 160px;
+    background: linear-gradient(180deg, #ffffff 0%, #fcfcfc 100%);
+    clip-path: ellipse(130% 70% at 70% 25%);
 }
 
 .messages-section {
-    padding-top: 40px;
-    padding-bottom: 180px;
+    padding-top: 60px;
+    padding-bottom: 160px;
     background: #ffffff;
-    clip-path: ellipse(150% 65% at 20% 30%);
+    clip-path: ellipse(140% 65% at 20% 30%);
 }
 
 .future-section {
-    padding-top: 40px;
+    padding-top: 60px;
     padding-bottom: 140px;
     background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
 }
 
-/* --- Clean Minimal Footer --- */
+/* --- Footer Area --- */
 .footer-section {
     background: #ffffff;
     padding: 60px 0 40px 0;
@@ -234,37 +227,37 @@ img[src*="btn_apple"] {
     font-weight: 500;
 }
 
+.contact-link:hover {
+    text-decoration: underline;
+}
+
 .footer-logo-wrapper {
     margin-top: 20px;
 }
 
 .footer-company-logo {
-    max-width: 32px;
+    max-width: 35px;
     height: auto;
 }
 
-/* --- Responsive Layout for Mobile --- */
+/* --- Responsive Viewport for Mobile --- */
 @media (max-width: 768px) {
-    .channels-section .row-layout,
-    .messages-section .row-layout,
+    .row-layout, 
+    .channels-section .row-layout, 
+    .messages-section .row-layout, 
     .future-section .row-layout {
-        display: flex;
-        flex-direction: column;
+        flex-direction: column !important;
         text-align: center;
-        gap: 50px;
+        gap: 40px;
     }
     
     .hero-section .row-layout {
-        flex-direction: column-reverse;
-        text-align: center;
+        flex-direction: column-reverse !important;
     }
 
-    .channels-section .text-content,
-    .messages-section .text-content,
-    .future-section .text-content {
+    .text-content {
+        padding: 0 !important;
         align-items: center;
-        text-align: center;
-        padding: 0;
     }
 
     .section-desc {
