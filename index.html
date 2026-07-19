@@ -27,12 +27,12 @@
             padding: 0 30px;
         }
 
-        /* --- STRICTOR COMPACT GAPS: Ek dum tight spacing --- */
+        /* --- Strict Row & Layout Structure --- */
         .section-row {
             display: table;
             width: 100%;
             table-layout: fixed;
-            margin: 15px 0; /* Boht kam margin taake space khatam ho */
+            margin: 15px 0;
         }
 
         .left-col, .right-col {
@@ -41,7 +41,7 @@
             width: 50%;
         }
 
-        /* --- TEXT SIZE BARA KAR DIYA --- */
+        /* --- Brand & Typography --- */
         .brand-logo {
             max-width: 240px;
             height: auto;
@@ -49,7 +49,7 @@
         }
 
         .main-tagline {
-            font-size: 1.8rem; /* Font bada kar diya */
+            font-size: 1.8rem;
             font-weight: 800;
             color: #000000;
             letter-spacing: 0.5px;
@@ -63,7 +63,7 @@
         }
 
         .section-title {
-            font-size: 1.7rem; /* Heading mazeed badi aur bold */
+            font-size: 1.7rem;
             font-weight: 800;
             color: #111111;
             letter-spacing: 2px;
@@ -72,13 +72,13 @@
         }
 
         .section-desc {
-            font-size: 1.3rem; /* Description text bada kar diya */
+            font-size: 1.3rem;
             line-height: 1.5;
             color: #555555;
             font-weight: 500;
         }
 
-        /* Side Alignments */
+        /* Standard Paddings */
         .padding-left-text {
             padding-left: 50px;
             text-align: left;
@@ -115,38 +115,94 @@
             max-width: 88%;
         }
 
-        /* --- Original Style Badges --- */
+        /* --- FIXED EXACT LOGO COLORS & LOOK (PURE CSS) --- */
         .badge-container {
             margin-top: 15px;
+            display: flex;
+            gap: 12px;
         }
 
-        .store-link {
-            display: inline-block;
-            margin-right: 10px;
-            vertical-align: middle;
+        .exact-store-btn {
+            display: inline-flex;
+            align-items: center;
+            width: 155px;
+            height: 48px;
+            padding: 5px 12px;
+            border-radius: 7px;
+            text-decoration: none;
+            color: #ffffff !important;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+            transition: transform 0.2s ease;
         }
 
-        .store-badge {
-            height: 45px;
-            width: auto;
-            display: block;
+        .exact-store-btn:hover {
+            transform: translateY(-2px);
         }
 
-        /* --- Section Control --- */
+        /* Asli Android Green Color matching the reference image */
+        .btn-green-android {
+            background-color: #8bc34a !important; 
+        }
+
+        /* Asli iOS Jet Black Color */
+        .btn-black-apple {
+            background-color: #000000 !important;
+        }
+
+        .btn-icon {
+            font-size: 24px;
+            margin-right: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .btn-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .btn-top-text {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            opacity: 0.9;
+        }
+
+        .btn-main-text {
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        /* --- FIXED BACKGROUND WAVES (S-Curves/Subtle Dark Shades) --- */
         .section-wrapper {
             position: relative;
             background-color: #ffffff;
         }
 
         .hero-section {
-            background: linear-gradient(180deg, #fafafa 0%, #f4f4f4 100%);
-            padding: 40px 0 60px 0; /* Padding bilkul tight */
-            border-bottom-left-radius: 50% 30px;
-            border-bottom-right-radius: 50% 30px;
+            background: linear-gradient(180deg, #fdfdfd 0%, #ececec 100%);
+            padding: 40px 0 70px 0;
+            border-bottom-left-radius: 50% 40px;
+            border-bottom-right-radius: 50% 40px;
         }
 
-        .channels-section, .messages-section, .future-section {
-            padding: 10px 0; /* Bilkul minimal space vertical */
+        /* Channels Wave Style Background (Thoda sa blackish/greyish gradient) */
+        .channels-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f4f4f4 50%, #ffffff 100%);
+            padding: 30px 0;
+        }
+
+        /* Messages Wave Style Background */
+        .messages-section {
+            background: linear-gradient(225deg, #ffffff 0%, #ededed 50%, #ffffff 100%);
+            padding: 30px 0;
+        }
+
+        /* In Future Wave Style Background */
+        .future-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f3f3f3 60%, #ffffff 100%);
+            padding: 30px 0;
         }
 
         /* --- Footer --- */
@@ -164,11 +220,10 @@
         }
 
         .central-badges {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
             margin-bottom: 20px;
-        }
-
-        .central-badges .store-link {
-            margin: 0 5px;
         }
 
         .contact-text {
@@ -209,6 +264,9 @@
             .section-desc {
                 margin: 0 auto;
             }
+            .badge-container {
+                justify-content: center;
+            }
             .hero-section .section-row {
                 display: flex !important;
                 flex-direction: column-reverse;
@@ -227,8 +285,22 @@
                     <h1 class="main-tagline">WATCH. COMMUNICATE. CREATE.</h1>
                     <p class="sub-tagline">Everything you need to socialise</p>
                     <div class="badge-container">
-                        <a href="#" class="store-link"><img src="images/btn_android.png" alt="Android Store" class="store-badge"></a>
-                        <a href="#" class="store-link"><img src="images/btn_apple.png" alt="Apple Store" class="store-badge"></a>
+                        <!-- Pure CSS Exact Android Green Logo Button -->
+                        <a href="#" class="exact-store-btn btn-green-android">
+                            <span class="btn-icon">🤖</span>
+                            <div class="btn-text-wrapper">
+                                <span class="btn-top-text">Available on the</span>
+                                <span class="btn-main-text">App Store</span>
+                            </div>
+                        </a>
+                        <!-- Pure CSS Exact iOS Black Logo Button -->
+                        <a href="#" class="exact-store-btn btn-black-apple">
+                            <span class="btn-icon">🍏</span>
+                            <div class="btn-text-wrapper">
+                                <span class="btn-top-text">Download on the</span>
+                                <span class="btn-main-text">App Store</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="right-col">
@@ -295,9 +367,21 @@
     <footer class="footer-section">
         <div class="container">
             <p class="download-text">For download click here:</p>
-            <div class="badge-container central-badges">
-                <a href="#" class="store-link"><img src="images/btn_android.png" alt="Android Store" class="store-badge"></a>
-                <a href="#" class="store-link"><img src="images/btn_apple.png" alt="Apple Store" class="store-badge"></a>
+            <div class="central-badges">
+                <a href="#" class="exact-store-btn btn-green-android">
+                    <span class="btn-icon">🤖</span>
+                    <div class="btn-text-wrapper">
+                        <span class="btn-top-text">Available on the</span>
+                        <span class="btn-main-text">App Store</span>
+                    </div>
+                </a>
+                <a href="#" class="exact-store-btn btn-black-apple">
+                    <span class="btn-icon">🍏</span>
+                    <div class="btn-text-wrapper">
+                        <span class="btn-top-text">Download on the</span>
+                        <span class="btn-main-text">App Store</span>
+                    </div>
+                </a>
             </div>
             <p class="contact-text">Any questions? Feel free to <a href="#" class="contact-link">CONTACT US</a></p>
             <div class="footer-logo-wrapper">
