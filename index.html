@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catchhub - Watch. Communicate. Create.</title>
     <style>
-        /* --- Global Reset & Body --- */
+        /* --- Global Reset --- */
         * {
             margin: 0;
             padding: 0;
@@ -15,7 +15,7 @@
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: #ffffff;
-            color: #444444;
+            color: #333333;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
@@ -27,12 +27,12 @@
             padding: 0 40px;
         }
 
-        /* --- Strict Row & Table Layout for Exact Alignment --- */
+        /* --- REDUCED GAPS: Sections Ooper Shift Karne Ke Liye --- */
         .section-row {
             display: table;
             width: 100%;
             table-layout: fixed;
-            margin: 60px 0;
+            margin: 30px 0; /* Margins ko 80px se kam karke 30px kar diya */
         }
 
         .left-col, .right-col {
@@ -41,11 +41,11 @@
             width: 50%;
         }
 
-        /* --- Brand & Typography --- */
+        /* --- Typography --- */
         .brand-logo {
-            max-width: 220px;
+            max-width: 200px;
             height: auto;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
 
         .main-tagline {
@@ -53,33 +53,33 @@
             font-weight: 700;
             color: #111111;
             letter-spacing: 0.5px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .sub-tagline {
             font-size: 1.05rem;
             color: #888888;
-            margin-bottom: 35px;
+            margin-bottom: 20px;
         }
 
         .section-title {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             font-weight: 700;
             color: #111111;
             letter-spacing: 2px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             text-transform: uppercase;
         }
 
         .section-desc {
-            font-size: 1.15rem;
-            line-height: 1.6;
+            font-size: 1.1rem;
+            line-height: 1.5;
             color: #777777;
         }
 
-        /* Standard Paddings matching your original image */
+        /* Exact Alignments from Original Picture */
         .padding-left-text {
-            padding-left: 70px;
+            padding-left: 60px;
             text-align: left;
         }
 
@@ -88,7 +88,7 @@
             text-align: left;
         }
 
-        /* MESSAGES: Perfect Centre alignment inside the column */
+        /* MESSAGES: Centered Block on the Left Column */
         .messages-text-block {
             text-align: center;
             padding-right: 40px;
@@ -99,7 +99,7 @@
             max-width: 420px;
         }
 
-        /* --- Images Wrapper --- */
+        /* --- Image Wrapper --- */
         .img-wrapper {
             display: block;
             text-align: center;
@@ -111,46 +111,27 @@
         }
 
         .max-width-mockup {
-            max-width: 85%;
+            max-width: 82%;
         }
 
-        /* --- PURE CSS BADGES (No more broken images or gray colors) --- */
+        /* --- ORIGINAL IMAGE LOGOS (Fixed Image Links) --- */
         .badge-container {
             margin-top: 15px;
-            display: flex;
-            gap: 12px;
         }
 
-        .btn-custom {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            height: 44px;
-            padding: 0 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            color: #ffffff !important;
-            font-weight: bold;
-            font-size: 0.85rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-            transition: transform 0.2s ease;
+        .store-link {
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
         }
 
-        .btn-custom:hover {
-            transform: translateY(-2px);
+        .store-badge {
+            height: 40px; /* Original design size */
+            width: auto;
+            display: block;
         }
 
-        /* Exact Green Color for Android */
-        .btn-android {
-            background-color: #a4c639 !important;
-        }
-
-        /* Exact Solid Black for Apple */
-        .btn-apple {
-            background-color: #000000 !important;
-        }
-
-        /* --- Structure Backgrounds --- */
+        /* --- Section Dynamic Paddings --- */
         .section-wrapper {
             position: relative;
             background-color: #ffffff;
@@ -158,19 +139,19 @@
 
         .hero-section {
             background: linear-gradient(180deg, #fafafa 0%, #f4f4f4 100%);
-            padding: 80px 0 120px 0;
-            border-bottom-left-radius: 50% 40px;
-            border-bottom-right-radius: 50% 40px;
+            padding: 50px 0 80px 0; /* Padding kam kar di takay ooper push ho */
+            border-bottom-left-radius: 50% 30px;
+            border-bottom-right-radius: 50% 30px;
         }
 
         .channels-section, .messages-section, .future-section {
-            padding: 50px 0;
+            padding: 25px 0; /* Tight vertical padding */
         }
 
-        /* --- Footer Section --- */
+        /* --- Footer --- */
         .footer-section {
             background: #ffffff;
-            padding: 80px 0 40px 0;
+            padding: 50px 0 30px 0;
             text-align: center;
         }
 
@@ -178,20 +159,21 @@
             font-size: 1.05rem;
             font-weight: 600;
             color: #333333;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .central-badges {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+        }
+
+        .central-badges .store-link {
+            margin: 0 5px;
         }
 
         .contact-text {
             font-size: 0.95rem;
             color: #888888;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .contact-link {
@@ -201,15 +183,15 @@
         }
 
         .footer-logo-wrapper {
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         .footer-company-logo {
-            max-width: 35px;
+            max-width: 30px;
             height: auto;
         }
 
-        /* --- Mobile Devices Support --- */
+        /* --- Mobile Responsive Layout --- */
         @media (max-width: 768px) {
             .section-row, .left-col, .right-col {
                 display: block !important;
@@ -217,7 +199,7 @@
                 text-align: center !important;
             }
             .left-col {
-                margin-bottom: 40px;
+                margin-bottom: 30px;
             }
             .padding-left-text, .padding-right-text, .messages-text-block {
                 padding: 0 !important;
@@ -225,9 +207,6 @@
             }
             .section-desc {
                 margin: 0 auto;
-            }
-            .badge-container {
-                justify-content: center;
             }
             .hero-section .section-row {
                 display: flex !important;
@@ -247,8 +226,8 @@
                     <h1 class="main-tagline">WATCH. COMMUNICATE. CREATE.</h1>
                     <p class="sub-tagline">Everything you need to socialise</p>
                     <div class="badge-container">
-                        <a href="#" class="btn-custom btn-android">Android App</a>
-                        <a href="#" class="btn-custom btn-apple">iOS App</a>
+                        <a href="#" class="store-link"><img src="images/btn_android.png" alt="Available on Android App Store" class="store-badge"></a>
+                        <a href="#" class="store-link"><img src="images/btn_apple.png" alt="Download on the App Store" class="store-badge"></a>
                     </div>
                 </div>
                 <div class="right-col">
@@ -260,7 +239,7 @@
         </div>
     </div>
 
-    <!-- SECTION 2: CHANNELS (Image Left, Text Right) -->
+    <!-- SECTION 2: CHANNELS -->
     <div class="section-wrapper channels-section">
         <div class="container">
             <div class="section-row">
@@ -277,7 +256,7 @@
         </div>
     </div>
 
-    <!-- SECTION 3: MESSAGES (Text Center Block on Left, Image Right) -->
+    <!-- SECTION 3: MESSAGES -->
     <div class="section-wrapper messages-section">
         <div class="container">
             <div class="section-row">
@@ -294,7 +273,7 @@
         </div>
     </div>
 
-    <!-- SECTION 4: IN FUTURE (Image Left, Text Right) -->
+    <!-- SECTION 4: IN FUTURE -->
     <div class="section-wrapper future-section">
         <div class="container">
             <div class="section-row">
@@ -315,9 +294,9 @@
     <footer class="footer-section">
         <div class="container">
             <p class="download-text">For download click here:</p>
-            <div class="central-badges">
-                <a href="#" class="btn-custom btn-android">Android App</a>
-                <a href="#" class="btn-custom btn-apple">iOS App</a>
+            <div class="badge-container central-badges">
+                <a href="#" class="store-link"><img src="images/btn_android.png" alt="Android Store" class="store-badge"></a>
+                <a href="#" class="store-link"><img src="images/btn_apple.png" alt="Apple Store" class="store-badge"></a>
             </div>
             <p class="contact-text">Any questions? Feel free to <a href="#" class="contact-link">CONTACT US</a></p>
             <div class="footer-logo-wrapper">
