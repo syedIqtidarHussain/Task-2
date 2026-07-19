@@ -20,12 +20,12 @@ body {
     padding: 0 40px;
 }
 
-/* --- Tight Layout Row Gap --- */
+/* --- Tight Layout Row Gap & Upward Shift --- */
 .section-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 35px 0; /* Gaps drastically reduced here */
+    padding: 15px 0; /* Padding drastically reduced to pull layouts up */
     gap: 30px;
 }
 
@@ -38,7 +38,7 @@ body {
 .brand-logo {
     max-width: 240px;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     display: block;
 }
 
@@ -54,7 +54,7 @@ body {
 .sub-tagline {
     font-size: 1.3rem;
     color: #666666;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .section-title {
@@ -62,7 +62,7 @@ body {
     font-weight: 800;
     color: #111111;
     letter-spacing: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-transform: uppercase;
 }
 
@@ -82,24 +82,27 @@ body {
     padding-right: 50px;
 }
 
+/* --- MOCKUP IMAGE SIZE INCREASED (CIRCLE FIX) --- */
 .img-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .mockup-img {
-    max-width: 100%;
+    width: 100%;        /* Image scale bumped up to fill the layout */
+    max-width: 100%;    /* Forced maximum layout utilization */
     height: auto;
 }
 
 .max-width-mockup {
-    max-width: 90%;
+    max-width: 95%;     /* Increased from 90% to make it noticeably larger */
 }
 
 /* --- Store Badges --- */
 .badge-container {
-    margin-top: 15px;
+    margin-top: 12px;
     display: flex;
     gap: 15px;
 }
@@ -112,12 +115,12 @@ body {
     -webkit-filter: grayscale(0%) !important;
 }
 
-/* --- NO TOP GAP: FUTURE ICONS FIX --- */
+/* --- IN FUTURE ICONS --- */
 .future-features-bar {
     display: flex;
     gap: 15px;
-    margin-top: 0px;       /* Top gap eliminated completely */
-    margin-bottom: 12px;   /* Clean tight gap right above title */
+    margin-top: 0px;       
+    margin-bottom: 10px;   
     align-items: center;
     justify-content: flex-start;
 }
@@ -146,16 +149,18 @@ body {
     box-shadow: 0 3px 8px rgba(0,0,0,0.03);
 }
 
-/* --- Wave Gradient Textures --- */
+/* --- WAVE SECTIONS SHIFTED UPWARDS --- */
 .section-wrapper {
     position: relative;
-    padding: 15px 0; /* Reduced inner padding of sections */
+    padding: 10px 0;           /* Tight inner padding */
+    margin-top: -25px;         /* Pulls the sections upwards to close gaps */
     background: #ffffff;
 }
 
 .hero-section {
     background: linear-gradient(180deg, #ffffff 30%, #eeeeee 100%);
-    padding-bottom: 30px;
+    padding-bottom: 25px;
+    margin-top: 0px;           /* Top section stays normal */
     border-bottom-left-radius: 50% 40px;
     border-bottom-right-radius: 50% 40px;
 }
@@ -175,29 +180,30 @@ body {
 /* --- Compact Footer --- */
 .footer-section {
     background: #ffffff;
-    padding: 40px 0 25px 0;
+    padding: 30px 0 20px 0;
     text-align: center;
     border-top: 1px solid #f0f0f0;
+    margin-top: -10px;
 }
 
 .download-text { 
     font-size: 1.2rem; 
     font-weight: 700; 
     color: #111111; 
-    margin-bottom: 15px; 
+    margin-bottom: 12px; 
 }
 
 .central-badges { 
     display: flex; 
     justify-content: center; 
     gap: 15px; 
-    margin-bottom: 20px; 
+    margin-bottom: 15px; 
 }
 
 .contact-text { 
     font-size: 1.1rem; 
     color: #666666; 
-    margin-bottom: 15px; 
+    margin-bottom: 12px; 
 }
 
 .contact-link { 
@@ -207,7 +213,7 @@ body {
 }
 
 .footer-logo-wrapper { 
-    margin-top: 15px; 
+    margin-top: 10px; 
 }
 
 .footer-company-logo { 
@@ -221,7 +227,7 @@ body {
     .section-row { 
         flex-direction: column !important; 
         text-align: center !important;
-        padding: 30px 0;
+        padding: 20px 0;
     }
     .left-col, .right-col { 
         width: 100% !important; 
@@ -236,6 +242,9 @@ body {
         justify-content: center; 
     }
     .brand-logo { 
-        margin: 0 auto 20px auto; 
+        margin: 0 auto 15px auto; 
     }
-}
+    .section-wrapper {
+        margin-top: 0px; /* Reset overlap adjustments on small screens */
+    }
+    }
