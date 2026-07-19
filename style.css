@@ -25,7 +25,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 0; /* Padding drastically reduced to pull layouts up */
+    padding: 15px 0; 
     gap: 30px;
 }
 
@@ -82,7 +82,7 @@ body {
     padding-right: 50px;
 }
 
-/* --- MOCKUP IMAGE SIZE INCREASED (CIRCLE FIX) --- */
+/* --- Mockup Image Size Increased --- */
 .img-wrapper {
     display: flex;
     justify-content: center;
@@ -91,28 +91,13 @@ body {
 }
 
 .mockup-img {
-    width: 100%;        /* Image scale bumped up to fill the layout */
-    max-width: 100%;    /* Forced maximum layout utilization */
+    width: 100%;        
+    max-width: 100%;    
     height: auto;
 }
 
 .max-width-mockup {
-    max-width: 95%;     /* Increased from 90% to make it noticeably larger */
-}
-
-/* --- Store Badges --- */
-.badge-container {
-    margin-top: 12px;
-    display: flex;
-    gap: 15px;
-}
-
-.store-img-badge {
-    height: 46px;
-    width: auto;
-    display: block;
-    filter: grayscale(0%) !important;
-    -webkit-filter: grayscale(0%) !important;
+    max-width: 95%;     
 }
 
 /* --- IN FUTURE ICONS --- */
@@ -149,18 +134,18 @@ body {
     box-shadow: 0 3px 8px rgba(0,0,0,0.03);
 }
 
-/* --- WAVE SECTIONS SHIFTED UPWARDS --- */
+/* --- Wave Sections Shifted Upwards --- */
 .section-wrapper {
     position: relative;
-    padding: 10px 0;           /* Tight inner padding */
-    margin-top: -25px;         /* Pulls the sections upwards to close gaps */
+    padding: 10px 0;           
+    margin-top: -25px;         
     background: #ffffff;
 }
 
 .hero-section {
     background: linear-gradient(180deg, #ffffff 30%, #eeeeee 100%);
     padding-bottom: 25px;
-    margin-top: 0px;           /* Top section stays normal */
+    margin-top: 0px;           
     border-bottom-left-radius: 50% 40px;
     border-bottom-right-radius: 50% 40px;
 }
@@ -177,6 +162,80 @@ body {
     background: linear-gradient(145deg, #ffffff 40%, #f2f2f2 80%, #ffffff 100%); 
 }
 
+/* --- CSS For Perfect Real Badge Colors --- */
+.badge-container {
+    margin-top: 12px;
+    display: flex;
+    gap: 15px;
+}
+
+.central-badges { 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    margin-bottom: 15px; 
+}
+
+.custom-store-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    min-width: 155px;
+    height: 46px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.custom-store-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Android Green Color Override */
+.android-btn {
+    background-color: #A4C639 !important; 
+    color: #ffffff !important;
+}
+
+/* Apple Black Color Override */
+.apple-btn {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.custom-store-btn i {
+    font-size: 1.7rem;
+    margin-right: 10px;
+    color: #ffffff !important;
+}
+
+.btn-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.btn-text span {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    color: #ffffff !important;
+    opacity: 0.9;
+}
+
+.btn-text strong {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff !important;
+}
+
+.central-badges .custom-store-btn {
+    margin: 0 5px;
+}
+
 /* --- Compact Footer --- */
 .footer-section {
     background: #ffffff;
@@ -191,13 +250,6 @@ body {
     font-weight: 700; 
     color: #111111; 
     margin-bottom: 12px; 
-}
-
-.central-badges { 
-    display: flex; 
-    justify-content: center; 
-    gap: 15px; 
-    margin-bottom: 15px; 
 }
 
 .contact-text { 
@@ -219,7 +271,6 @@ body {
 .footer-company-logo { 
     max-width: 38px; 
     height: auto; 
-    filter: grayscale(0%) !important;
 }
 
 /* --- Responsive Layout --- */
@@ -245,6 +296,6 @@ body {
         margin: 0 auto 15px auto; 
     }
     .section-wrapper {
-        margin-top: 0px; /* Reset overlap adjustments on small screens */
+        margin-top: 0px; 
     }
-    }
+}
