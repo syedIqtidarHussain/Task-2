@@ -4,86 +4,321 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catchhub - Watch. Communicate. Create.</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- Global Reset & Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* --- EXACT LAYOUT STRUCTURE (TABLE STYLE FOR PERFECT ALIGNMENT) --- */
+        .section-row {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            margin: 80px 0;
+        }
+
+        .left-col, .right-col {
+            display: table-cell;
+            vertical-align: middle;
+            width: 50%;
+        }
+
+        /* --- Typography --- */
+        .brand-logo {
+            max-width: 220px;
+            height: auto;
+            margin-bottom: 25px;
+        }
+
+        .main-tagline {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #111111;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .sub-tagline {
+            font-size: 1.05rem;
+            color: #888888;
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #111111;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .section-desc {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #777777;
+            max-width: 450px;
+        }
+
+        /* Text alignments based on your exact image */
+        .text-left-align {
+            text-align: left;
+            padding-right: 40px;
+        }
+
+        .text-right-align {
+            text-align: left; /* Text contents align left inside their block */
+            padding-left: 60px;
+        }
+
+        /* --- Mockup Centering --- */
+        .img-wrapper {
+            display: block;
+            text-align: center;
+        }
+
+        .mockup-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .max-width-mockup {
+            max-width: 85%;
+        }
+
+        /* --- Fix Store Badges Colors --- */
+        .badge-container {
+            margin-top: 15px;
+        }
+
+        .store-link {
+            display: inline-block;
+            margin-right: 12px;
+            border-radius: 8px;
+            overflow: hidden;
+            vertical-align: middle;
+        }
+
+        .store-badge {
+            height: 45px;
+            width: auto;
+            display: block;
+        }
+
+        /* Applying accurate background colors directly to the images */
+        img[src*="btn_android"] {
+            background-color: #a4c639 !important;
+        }
+
+        img[src*="btn_apple"] {
+            background-color: #000000 !important;
+        }
+
+        /* --- Wave Sections Styling --- */
+        .section-wrapper {
+            position: relative;
+            background-color: #ffffff;
+        }
+
+        .hero-section {
+            background: linear-gradient(180deg, #fafafa 0%, #f4f4f4 100%);
+            padding: 80px 0 140px 0;
+            border-bottom-left-radius: 50% 40px;
+            border-bottom-right-radius: 50% 40px;
+        }
+
+        .channels-section {
+            padding: 40px 0;
+        }
+
+        .messages-section {
+            padding: 40px 0;
+        }
+
+        .future-section {
+            padding: 40px 0;
+        }
+
+        /* --- Footer Section --- */
+        .footer-section {
+            background: #ffffff;
+            padding: 80px 0 40px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: block;
+            text-align: center;
+        }
+
+        .download-text {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .central-badges {
+            margin-bottom: 30px;
+        }
+
+        .central-badges .store-link {
+            margin: 0 6px;
+        }
+
+        .contact-text {
+            font-size: 0.95rem;
+            color: #888888;
+            margin-bottom: 30px;
+        }
+
+        .contact-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-logo-wrapper {
+            margin-top: 20px;
+        }
+
+        .footer-company-logo {
+            max-width: 35px;
+            height: auto;
+        }
+
+        /* --- Responsive Layout for Mobile Phones --- */
+        @media (max-width: 768px) {
+            .section-row, .left-col, .right-col {
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+            .left-col {
+                margin-bottom: 40px;
+            }
+            .text-left-align, .text-right-align {
+                padding: 0 !important;
+                text-align: center !important;
+            }
+            .section-desc {
+                margin: 0 auto;
+            }
+            /* Hero reverse layout on mobile */
+            .hero-section .section-row {
+                display: flex !important;
+                flex-direction: column-reverse;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- SECTION 1: HERO / TOP SECTION -->
-    <section class="section hero-section">
-        <div class="container row-layout reverse-mobile">
-            <div class="text-content hero-text">
-                <!-- Naya Name: logo.png -->
-                <img src="images/logo.png" alt="Catchhub Logo" class="brand-logo">
-                <h1 class="main-tagline">WATCH. COMMUNICATE. CREATE.</h1>
-                <p class="sub-tagline">Everything you need to socialise</p>
-                <div class="badge-container">
-                    <!-- Naya Name: btn_android.png -->
-                    <a href="#"><img src="images/btn_android.png" alt="Available on Android" class="store-badge"></a>
-                    <!-- Naya Name: btn_apple.png -->
-                    <a href="#"><img src="images/btn_apple.png" alt="Available on Apple Store" class="store-badge"></a>
+    <!-- SECTION 1: HERO (Text Left, Image Right) -->
+    <div class="section-wrapper hero-section">
+        <div class="container">
+            <div class="section-row">
+                <div class="left-col text-left-align">
+                    <img src="images/logo.png" alt="Catchhub Logo" class="brand-logo">
+                    <h1 class="main-tagline">WATCH. COMMUNICATE. CREATE.</h1>
+                    <p class="sub-tagline">Everything you need to socialise</p>
+                    <div class="badge-container">
+                        <a href="#" class="store-link"><img src="images/btn_android.png" alt="Android Store" class="store-badge"></a>
+                        <a href="#" class="store-link"><img src="images/btn_apple.png" alt="Apple Store" class="store-badge"></a>
+                    </div>
+                </div>
+                <div class="right-col">
+                    <div class="img-wrapper">
+                        <img src="images/hero_phones.png" alt="Catchhub App" class="mockup-img">
+                    </div>
                 </div>
             </div>
-            <div class="image-content hero-image">
-                <!-- Naya Name: hero_phones.png -->
-                <img src="images/hero_phones.png" alt="Catchhub App Showcase" class="mockup-img">
+        </div>
+    </div>
+
+    <!-- SECTION 2: CHANNELS (Image Left, Text Right) -->
+    <div class="section-wrapper channels-section">
+        <div class="container">
+            <div class="section-row">
+                <div class="left-col">
+                    <div class="img-wrapper">
+                        <img src="images/channels_phones.png" alt="Channels" class="mockup-img max-width-mockup">
+                    </div>
+                </div>
+                <div class="right-col text-right-align">
+                    <h2 class="section-title">CHANNELS</h2>
+                    <p class="section-desc">Enjoy the videos and music you love. Create your own business or entertainment channel.</p>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- SECTION 2: CHANNELS SECTION -->
-    <section class="section channels-section">
-        <div class="container row-layout">
-            <div class="image-content">
-                <!-- Naya Name: channels_phones.png -->
-                <img src="images/channels_phones.png" alt="Channels Feature" class="mockup-img max-width-mockup">
-            </div>
-            <div class="text-content right-align-text">
-                <h2 class="section-title">CHANNELS</h2>
-                <p class="section-desc">Enjoy the videos and music you love. Create your own business or entertainment channel.</p>
+    <!-- SECTION 3: MESSAGES (Text Left, Image Right) -->
+    <div class="section-wrapper messages-section">
+        <div class="container">
+            <div class="section-row">
+                <!-- Image aur Text Columns ko flip kar diya taake exact image jaisa ho jaye -->
+                <div class="left-col text-left-align" style="padding-left: 60px;">
+                    <h2 class="section-title" style="text-align: center; max-width: 450px;">MESSAGES</h2>
+                    <p class="section-desc" style="text-align: center; max-width: 450px;">Communicate seamlessly. Create your own professional or social group chat</p>
+                </div>
+                <div class="right-col">
+                    <div class="img-wrapper">
+                        <img src="images/messages_phones.png" alt="Messages" class="mockup-img max-width-mockup">
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- SECTION 3: MESSAGES SECTION -->
-    <section class="section messages-section">
-        <div class="container row-layout reverse-mobile">
-            <div class="text-content left-align-text">
-                <h2 class="section-title">MESSAGES</h2>
-                <p class="section-desc">Communicate seamlessly. Create your own professional or social group chat</p>
-            </div>
-            <div class="image-content">
-                <!-- Naya Name: messages_phones.png -->
-                <img src="images/messages_phones.png" alt="Messages Feature" class="mockup-img max-width-mockup">
+    <!-- SECTION 4: IN FUTURE (Image Left, Text Right) -->
+    <div class="section-wrapper future-section">
+        <div class="container">
+            <div class="section-row">
+                <div class="left-col">
+                    <div class="img-wrapper">
+                        <img src="images/future_phones.png" alt="In Future" class="mockup-img max-width-mockup">
+                    </div>
+                </div>
+                <div class="right-col text-right-align">
+                    <h2 class="section-title">IN FUTURE</h2>
+                    <p class="section-desc">Communicate seamlessly. Create your own professional or social group chat</p>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- SECTION 4: IN FUTURE SECTION -->
-    <section class="section future-section">
-        <div class="container row-layout">
-            <div class="image-content">
-                <!-- Naya Name: future_phones.png -->
-                <img src="images/future_phones.png" alt="Future Features" class="mockup-img max-width-mockup">
-            </div>
-            <div class="text-content right-align-text">
-                <h2 class="section-title">IN FUTURE</h2>
-                <p class="section-desc">Communicate seamlessly. Create your own professional or social group chat</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 5: FOOTER / DOWNLOAD -->
+    <!-- SECTION 5: FOOTER -->
     <footer class="footer-section">
-        <div class="footer-container">
-            <p class="download-text">For download click here:</p>
-            <div class="badge-container central-badges">
-                <a href="#"><img src="images/btn_android.png" alt="Android Store" class="store-badge"></a>
-                <a href="#"><img src="images/btn_apple.png" alt="Apple Store" class="store-badge"></a>
-            </div>
-            <p class="contact-text">Any questions? Feel free to <a href="#" class="contact-link">CONTACT US</a></p>
-            <div class="footer-logo-wrapper">
-                <!-- Naya Name: peratude_logo.png -->
-                <img src="images/peratude_logo.png" alt="Peratude Logo" class="footer-company-logo">
+        <div class="container">
+            <div class="footer-container">
+                <p class="download-text">For download click here:</p>
+                <div class="badge-container central-badges">
+                    <a href="#" class="store-link"><img src="images/btn_android.png" alt="Android Store" class="store-badge"></a>
+                    <a href="#" class="store-link"><img src="images/btn_apple.png" alt="Apple Store" class="store-badge"></a>
+                </div>
+                <p class="contact-text">Any questions? Feel free to <a href="#" class="contact-link">CONTACT US</a></p>
+                <div class="footer-logo-wrapper">
+                    <img src="images/peratude_logo.png" alt="Peratude Logo" class="footer-company-logo">
+                </div>
             </div>
         </div>
     </footer>
