@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catchhub - Watch. Communicate. Create.</title>
     <style>
-        /* --- Global Reset & Styles --- */
+        /* --- Global Reset & Body --- */
         * {
             margin: 0;
             padding: 0;
@@ -15,7 +15,7 @@
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: #ffffff;
-            color: #333333;
+            color: #444444;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
@@ -27,12 +27,12 @@
             padding: 0 40px;
         }
 
-        /* --- LAYOUT STRUCTURE --- */
+        /* --- Strict Row & Table Layout for Exact Alignment --- */
         .section-row {
             display: table;
             width: 100%;
             table-layout: fixed;
-            margin: 80px 0;
+            margin: 60px 0;
         }
 
         .left-col, .right-col {
@@ -41,7 +41,7 @@
             width: 50%;
         }
 
-        /* --- Typography --- */
+        /* --- Brand & Typography --- */
         .brand-logo {
             max-width: 220px;
             height: auto;
@@ -53,7 +53,7 @@
             font-weight: 700;
             color: #111111;
             letter-spacing: 0.5px;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .sub-tagline {
@@ -77,29 +77,29 @@
             color: #777777;
         }
 
-        /* Text alignments matching original perfectly */
-        .text-left-align {
+        /* Standard Paddings matching your original image */
+        .padding-left-text {
+            padding-left: 70px;
             text-align: left;
+        }
+
+        .padding-right-text {
             padding-right: 40px;
+            text-align: left;
         }
 
-        .text-right-align {
-            text-align: left; 
-            padding-left: 60px;
-        }
-
-        /* FIX: Messages text center aligned */
-        .text-center-block {
+        /* MESSAGES: Perfect Centre alignment inside the column */
+        .messages-text-block {
             text-align: center;
-            padding-right: 50px;
-            padding-left: 50px;
+            padding-right: 40px;
+            padding-left: 40px;
         }
-        .text-center-block .section-desc {
+        .messages-text-block .section-desc {
             margin: 0 auto;
             max-width: 420px;
         }
 
-        /* --- Mockup Centering --- */
+        /* --- Images Wrapper --- */
         .img-wrapper {
             display: block;
             text-align: center;
@@ -114,41 +114,43 @@
             max-width: 85%;
         }
 
-        /* --- FIX: Store Badges Real Colors & Icons --- */
+        /* --- PURE CSS BADGES (No more broken images or gray colors) --- */
         .badge-container {
             margin-top: 15px;
+            display: flex;
+            gap: 12px;
         }
 
-        .store-link {
-            display: inline-block;
-            margin-right: 12px;
+        .btn-custom {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 44px;
+            padding: 0 20px;
             border-radius: 6px;
-            overflow: hidden;
-            vertical-align: middle;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #ffffff !important;
+            font-weight: bold;
+            font-size: 0.85rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease;
         }
 
-        .store-badge {
-            height: 42px;
-            width: auto;
-            display: block;
-            padding: 4px 12px;
-            object-fit: contain;
+        .btn-custom:hover {
+            transform: translateY(-2px);
         }
 
-        /* Play store accurate green background and making icon crisp */
-        img[src*="btn_android"] {
+        /* Exact Green Color for Android */
+        .btn-android {
             background-color: #a4c639 !important;
-            filter: invert(1) brightness(10); /* Inverts dark grey to solid white icon/text */
         }
 
-        /* App store accurate black background and making icon crisp */
-        img[src*="btn_apple"] {
+        /* Exact Solid Black for Apple */
+        .btn-apple {
             background-color: #000000 !important;
-            filter: invert(1) brightness(10); /* Inverts dark grey to solid white icon/text */
         }
 
-        /* --- Wave Sections Styling --- */
+        /* --- Structure Backgrounds --- */
         .section-wrapper {
             position: relative;
             background-color: #ffffff;
@@ -156,32 +158,19 @@
 
         .hero-section {
             background: linear-gradient(180deg, #fafafa 0%, #f4f4f4 100%);
-            padding: 80px 0 140px 0;
+            padding: 80px 0 120px 0;
             border-bottom-left-radius: 50% 40px;
             border-bottom-right-radius: 50% 40px;
         }
 
-        .channels-section {
-            padding: 40px 0;
-        }
-
-        .messages-section {
-            padding: 40px 0;
-        }
-
-        .future-section {
-            padding: 40px 0;
+        .channels-section, .messages-section, .future-section {
+            padding: 50px 0;
         }
 
         /* --- Footer Section --- */
         .footer-section {
             background: #ffffff;
             padding: 80px 0 40px 0;
-            text-align: center;
-        }
-
-        .footer-container {
-            display: block;
             text-align: center;
         }
 
@@ -193,11 +182,10 @@
         }
 
         .central-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
             margin-bottom: 30px;
-        }
-
-        .central-badges .store-link {
-            margin: 0 6px;
         }
 
         .contact-text {
@@ -221,7 +209,7 @@
             height: auto;
         }
 
-        /* --- Mobile Responsiveness --- */
+        /* --- Mobile Devices Support --- */
         @media (max-width: 768px) {
             .section-row, .left-col, .right-col {
                 display: block !important;
@@ -231,12 +219,15 @@
             .left-col {
                 margin-bottom: 40px;
             }
-            .text-left-align, .text-right-align, .text-center-block {
+            .padding-left-text, .padding-right-text, .messages-text-block {
                 padding: 0 !important;
                 text-align: center !important;
             }
             .section-desc {
                 margin: 0 auto;
+            }
+            .badge-container {
+                justify-content: center;
             }
             .hero-section .section-row {
                 display: flex !important;
@@ -251,13 +242,13 @@
     <div class="section-wrapper hero-section">
         <div class="container">
             <div class="section-row">
-                <div class="left-col text-left-align">
+                <div class="left-col padding-right-text">
                     <img src="images/logo.png" alt="Catchhub Logo" class="brand-logo">
                     <h1 class="main-tagline">WATCH. COMMUNICATE. CREATE.</h1>
                     <p class="sub-tagline">Everything you need to socialise</p>
                     <div class="badge-container">
-                        <a href="#" class="store-link"><img src="images/btn_android.png" alt="Android Store" class="store-badge"></a>
-                        <a href="#" class="store-link"><img src="images/btn_apple.png" alt="Apple Store" class="store-badge"></a>
+                        <a href="#" class="btn-custom btn-android">Android App</a>
+                        <a href="#" class="btn-custom btn-apple">iOS App</a>
                     </div>
                 </div>
                 <div class="right-col">
@@ -278,7 +269,7 @@
                         <img src="images/channels_phones.png" alt="Channels" class="mockup-img max-width-mockup">
                     </div>
                 </div>
-                <div class="right-col text-right-align">
+                <div class="right-col padding-left-text">
                     <h2 class="section-title">CHANNELS</h2>
                     <p class="section-desc">Enjoy the videos and music you love. Create your own business or entertainment channel.</p>
                 </div>
@@ -286,11 +277,11 @@
         </div>
     </div>
 
-    <!-- SECTION 3: MESSAGES (Text Centre-Aligned Left Column, Image Right Column) -->
+    <!-- SECTION 3: MESSAGES (Text Center Block on Left, Image Right) -->
     <div class="section-wrapper messages-section">
         <div class="container">
             <div class="section-row">
-                <div class="left-col text-center-block">
+                <div class="left-col messages-text-block">
                     <h2 class="section-title">MESSAGES</h2>
                     <p class="section-desc">Communicate seamlessly. Create your own professional or social group chat</p>
                 </div>
@@ -312,7 +303,7 @@
                         <img src="images/future_phones.png" alt="In Future" class="mockup-img max-width-mockup">
                     </div>
                 </div>
-                <div class="right-col text-right-align">
+                <div class="right-col padding-left-text">
                     <h2 class="section-title">IN FUTURE</h2>
                     <p class="section-desc">Communicate seamlessly. Create your own professional or social group chat</p>
                 </div>
@@ -323,16 +314,14 @@
     <!-- SECTION 5: FOOTER -->
     <footer class="footer-section">
         <div class="container">
-            <div class="footer-container">
-                <p class="download-text">For download click here:</p>
-                <div class="badge-container central-badges">
-                    <a href="#" class="store-link"><img src="images/btn_android.png" alt="Android Store" class="store-badge"></a>
-                    <a href="#" class="store-link"><img src="images/btn_apple.png" alt="Apple Store" class="store-badge"></a>
-                </div>
-                <p class="contact-text">Any questions? Feel free to <a href="#" class="contact-link">CONTACT US</a></p>
-                <div class="footer-logo-wrapper">
-                    <img src="images/peratude_logo.png" alt="Peratude Logo" class="footer-company-logo">
-                </div>
+            <p class="download-text">For download click here:</p>
+            <div class="central-badges">
+                <a href="#" class="btn-custom btn-android">Android App</a>
+                <a href="#" class="btn-custom btn-apple">iOS App</a>
+            </div>
+            <p class="contact-text">Any questions? Feel free to <a href="#" class="contact-link">CONTACT US</a></p>
+            <div class="footer-logo-wrapper">
+                <img src="images/peratude_logo.png" alt="Peratude Logo" class="footer-company-logo">
             </div>
         </div>
     </footer>
