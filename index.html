@@ -13,7 +13,7 @@
         }
 
         body {
-            background-color: #fcfcfc;
+            background-color: #ffffff;
             color: #111111;
         }
 
@@ -21,6 +21,21 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px 40px;
+        }
+
+        /* BLACK BACKGROUND REMOVAL MAGIC FILTER */
+        .clean-img {
+            background-color: #000000;
+            display: inline-block;
+            border-radius: 8px;
+            overflow: hidden;
+            mix-blend-mode: lighten;
+        }
+
+        .clean-img img {
+            display: block;
+            width: 100%;
+            height: auto;
         }
 
         /* HERO SECTION */
@@ -36,14 +51,16 @@
             flex: 1.1;
         }
 
-        .hero-left .logo {
-            width: 300px; /* Bada Catchub Logo */
+        .hero-left .logo-box {
             margin-bottom: 25px;
-            display: block;
+        }
+
+        .hero-left .logo-box img {
+            width: 260px;
         }
 
         .hero-left h1 {
-            font-size: 28px; /* Extra Large Tagline */
+            font-size: 28px;
             font-weight: 900;
             letter-spacing: 2.5px;
             color: #000000;
@@ -52,7 +69,7 @@
         }
 
         .hero-left p {
-            font-size: 20px; /* Large Subtitle */
+            font-size: 20px;
             color: #555555;
             margin-bottom: 35px;
             font-weight: 500;
@@ -64,8 +81,8 @@
             align-items: center;
         }
 
-        .store-btns img {
-            height: 52px; /* Barray Store Buttons */
+        .store-btns .btn-box img {
+            height: 52px;
             width: auto;
             cursor: pointer;
         }
@@ -76,11 +93,8 @@
             justify-content: flex-end;
         }
 
-        .hero-right img {
-            width: 100%;
-            max-width: 580px; /* Barray Mobiles Mockup */
-            height: auto;
-            mix-blend-mode: multiply; /* Black background removal filter */
+        .hero-right .clean-img img {
+            max-width: 580px;
         }
 
         /* FEATURE SECTIONS */
@@ -88,7 +102,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 80px 0;
+            padding: 60px 0;
             gap: 60px;
         }
 
@@ -98,11 +112,8 @@
             justify-content: center;
         }
 
-        .feature-img img {
-            width: 100%;
-            max-width: 550px; /* High visibility mockups */
-            height: auto;
-            mix-blend-mode: multiply; /* Black background removal filter */
+        .feature-img .clean-img img {
+            max-width: 550px;
         }
 
         .feature-text {
@@ -110,7 +121,7 @@
         }
 
         .feature-text h2 {
-            font-size: 36px; /* Badi Headings */
+            font-size: 36px;
             font-weight: 900;
             letter-spacing: 4px;
             color: #000000;
@@ -119,7 +130,7 @@
         }
 
         .feature-text p {
-            font-size: 22px; /* Clean Bada Text */
+            font-size: 22px;
             line-height: 1.6;
             color: #444444;
             font-weight: 400;
@@ -158,19 +169,14 @@
         footer .brand-logo img {
             height: 60px;
             width: auto;
-            mix-blend-mode: multiply;
         }
 
-        /* RESPONSIVE DESIGN FOR PC/MOBILE */
+        /* RESPONSIVE DESIGN */
         @media (max-width: 900px) {
             .hero, .feature {
                 flex-direction: column;
                 text-align: center;
                 padding: 40px 0;
-            }
-
-            .hero-left .logo {
-                margin: 0 auto 20px;
             }
 
             .hero .store-btns, footer .store-btns {
@@ -198,23 +204,33 @@
         <!-- HERO SECTION -->
         <section class="hero">
             <div class="hero-left">
-                <img src="images/logo.png" alt="Catchub" class="logo">
+                <div class="clean-img logo-box">
+                    <img src="images/logo.png" alt="Catchub">
+                </div>
                 <h1>WATCH. COMMUNICATE. CREATE.</h1>
                 <p>Everything you need to socialise</p>
                 <div class="store-btns">
-                    <img src="images/btn_android.png" alt="Play Store">
-                    <img src="images/btn_apple.png" alt="App Store">
+                    <div class="clean-img btn-box">
+                        <img src="images/btn_android.png" alt="Play Store">
+                    </div>
+                    <div class="clean-img btn-box">
+                        <img src="images/btn_apple.png" alt="App Store">
+                    </div>
                 </div>
             </div>
             <div class="hero-right">
-                <img src="images/hero_phones.png" alt="App Preview">
+                <div class="clean-img">
+                    <img src="images/hero_phones.png" alt="App Preview">
+                </div>
             </div>
         </section>
 
         <!-- CHANNELS SECTION -->
         <section class="feature">
             <div class="feature-img">
-                <img src="images/channels_phones.png" alt="Channels">
+                <div class="clean-img">
+                    <img src="images/channels_phones.png" alt="Channels">
+                </div>
             </div>
             <div class="feature-text">
                 <h2>CHANNELS</h2>
@@ -229,14 +245,18 @@
                 <p>Communicate seamlessly. Create your own professional or social group chat</p>
             </div>
             <div class="feature-img">
-                <img src="images/messages_phones.png" alt="Messages">
+                <div class="clean-img">
+                    <img src="images/messages_phones.png" alt="Messages">
+                </div>
             </div>
         </section>
 
         <!-- IN FUTURE SECTION -->
         <section class="feature">
             <div class="feature-img">
-                <img src="images/future_phones.png" alt="In Future">
+                <div class="clean-img">
+                    <img src="images/future_phones.png" alt="In Future">
+                </div>
             </div>
             <div class="feature-text">
                 <h2>IN FUTURE</h2>
@@ -248,11 +268,15 @@
         <footer>
             <p class="download-title">For download click here:</p>
             <div class="store-btns">
-                <img src="images/btn_android.png" alt="Play Store">
-                <img src="images/btn_apple.png" alt="App Store">
+                <div class="clean-img btn-box">
+                    <img src="images/btn_android.png" alt="Play Store">
+                </div>
+                <div class="clean-img btn-box">
+                    <img src="images/btn_apple.png" alt="App Store">
+                </div>
             </div>
             <p class="contact-text">Any questions? Feel free to <a href="#">CONTACT US</a></p>
-            <div class="brand-logo">
+            <div class="clean-img brand-logo">
                 <img src="images/peratude_logo.png" alt="Peratude">
             </div>
         </footer>
