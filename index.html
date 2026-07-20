@@ -4,36 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catchub Landing Page</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f7f9fc;
+            color: #222;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .hero-left {
+            flex: 1;
+        }
+
+        .hero-left img.logo {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+
+        .hero-left h1 {
+            font-size: 18px;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .hero-left p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .store-btns {
+            display: flex;
+            gap: 10px;
+        }
+
+        .store-btns img {
+            height: 38px;
+        }
+
+        .hero-right {
+            flex: 1;
+            text-align: right;
+        }
+
+        .hero-right img {
+            max-width: 320px;
+            width: 100%;
+        }
+
+        /* FEATURES SECTION */
+        .feature {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 60px 0;
+            gap: 40px;
+        }
+
+        .feature img {
+            max-width: 320px;
+            width: 100%;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-text h2 {
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .feature-text p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 0 20px;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        footer .store-btns {
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        footer .contact {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        footer .contact a {
+            color: #0088cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer .brand-logo img {
+            height: 40px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero, .feature {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-right, .store-btns {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- HERO / HEADER SECTION -->
-    <header class="hero-section">
-        <div class="container hero-content">
+    <div class="container">
+        
+        <!-- HERO SECTION -->
+        <section class="hero">
             <div class="hero-left">
-                <img src="logo.png" alt="Catchub Logo" class="main-logo">
+                <!-- Replace src with your exact image path -->
+                <img src="1000453021.png" alt="Catchub" class="logo">
                 <h1>WATCH. COMMUNICATE. CREATE.</h1>
-                <p class="subtitle">Everything you need to socialise</p>
-                <div class="store-buttons">
-                    <a href="#"><img src="play-store.png" alt="Play Store"></a>
-                    <a href="#"><img src="app-store.png" alt="App Store"></a>
+                <p>Everything you need to socialise</p>
+                <div class="store-btns">
+                    <img src="1000453022.png" alt="Play Store">
+                    <img src="1000453024.png" alt="App Store">
                 </div>
             </div>
             <div class="hero-right">
-                <img src="header-mockup.png" alt="App Preview" class="mockup-img">
+                <img src="1000453025.png" alt="App Preview">
             </div>
-        </div>
-    </header>
+        </section>
 
-    <!-- MAIN CONTENT -->
-    <main class="container">
-        
         <!-- CHANNELS SECTION -->
-        <section class="feature-section">
-            <div class="feature-img">
-                <img src="channels-mockup.png" alt="Channels Preview">
-            </div>
+        <section class="feature">
+            <img src="1000453027.png" alt="Channels">
             <div class="feature-text">
                 <h2>CHANNELS</h2>
                 <p>Enjoy the videos and music you love. Create your own business or entertainment channel.</p>
@@ -41,41 +178,37 @@
         </section>
 
         <!-- MESSAGES SECTION -->
-        <section class="feature-section reverse">
+        <section class="feature">
             <div class="feature-text">
                 <h2>MESSAGES</h2>
                 <p>Communicate seamlessly. Create your own professional or social group chat</p>
             </div>
-            <div class="feature-img">
-                <img src="messages-mockup.png" alt="Messages Preview">
-            </div>
+            <img src="1000453026.png" alt="Messages">
         </section>
 
         <!-- IN FUTURE SECTION -->
-        <section class="feature-section">
-            <div class="feature-img">
-                <img src="future-mockup.png" alt="In Future Preview">
-            </div>
+        <section class="feature">
+            <img src="1000453028.png" alt="In Future">
             <div class="feature-text">
                 <h2>IN FUTURE</h2>
                 <p>Communicate seamlessly. Create your own professional or social group chat</p>
             </div>
         </section>
 
-    </main>
+        <!-- FOOTER -->
+        <footer>
+            <p>For download click here:</p>
+            <div class="store-btns">
+                <img src="1000453022.png" alt="Play Store">
+                <img src="1000453024.png" alt="App Store">
+            </div>
+            <p class="contact">Any questions? Feel free to <a href="#">CONTACT US</a></p>
+            <div class="brand-logo">
+                <img src="1000453023.png" alt="Peratude">
+            </div>
+        </footer>
 
-    <!-- FOOTER SECTION -->
-    <footer class="footer-section">
-        <p class="download-label">For download click here:</p>
-        <div class="store-buttons center">
-            <a href="#"><img src="play-store.png" alt="Play Store"></a>
-            <a href="#"><img src="app-store.png" alt="App Store"></a>
-        </div>
-        <p class="contact-text">Any questions? Feel free to <a href="#">CONTACT US</a></p>
-        <div class="footer-logo">
-            <img src="footer-logo.png" alt="Peratude Logo">
-        </div>
-    </footer>
+    </div>
 
 </body>
 </html>
