@@ -3,124 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catchhub - Watch. Communicate. Create.</title>
+    <title>Catchhub Landing Page</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Font for clean typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- HERO SECTION -->
-    <section class="section hero-section">
-        <div class="container layout-table">
-            <div class="table-row">
-                <!-- Left Content Column -->
-                <div class="table-cell content-column text-left">
-                    <img src="logo.png" alt="Catchhub Logo" class="main-logo">
-                    <h2 class="hero-tagline">WATCH. COMMUNICATE. CREATE.</h2>
-                    <p class="hero-subtext">Everything you need to socialise</p>
-                    <div class="badge-container">
-                        <a href="#" class="badge-link"><img src="btn_android.png" alt="Available on Android" class="store-badge"></a>
-                        <a href="#" class="badge-link"><img src="btn_apple.png" alt="Available on Apple Store" class="store-badge"></a>
-                    </div>
-                </div>
-                <!-- Right Image Column -->
-                <div class="table-cell image-column">
-                    <img src="hero_phones.png" alt="Catchhub Discovery and Channels" class="section-img img-hero">
+    <div class="landing-container">
+        
+        <!-- ================= HERO SECTION ================= -->
+        <section class="section hero-section">
+            <div class="content-side">
+                <img src="logo.png" alt="Catchhub Logo" class="main-logo">
+                <h1 class="hero-title">WATCH. COMMUNICATE. CREATE.</h1>
+                <p class="hero-subtitle">Everything you need to socialise</p>
+                
+                <div class="download-buttons">
+                    <a href="#" class="btn-link"><img src="btn_android.png" alt="Available on Android"></a>
+                    <a href="#" class="btn-link"><img src="btn_apple.png" alt="Available on Apple Store"></a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CHANNELS SECTION -->
-    <section class="section white-bg text-dark">
-        <div class="container layout-table">
-            <div class="table-row">
-                <!-- Left Image Column -->
-                <div class="table-cell image-column">
-                    <img src="channels_phones.png" alt="Catchhub Channels View" class="section-img img-channels">
-                </div>
-                <!-- Right Content Column -->
-                <div class="table-cell content-column text-center">
-                    <h2 class="section-heading tracking-wide">CHANNELS</h2>
-                    <p class="section-description">
-                        Enjoy the videos and music you love.<br>
-                        Create your own business<br>
-                        or entertainment channel.
-                    </p>
-                </div>
+            <div class="image-side">
+                <img src="hero_phones.png" alt="Hero Phones" class="responsive-img phone-shadow">
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- MESSAGES SECTION -->
-    <section class="section clear-bg">
-        <div class="container layout-table">
-            <div class="table-row">
-                <!-- Left Content Column -->
-                <div class="table-cell content-column text-center">
-                    <h2 class="section-heading tracking-wide">MESSAGES</h2>
-                    <p class="section-description">
-                        Communicate seamlessly.<br>
-                        Create your own professional<br>
-                        or social group chat.
-                    </p>
-                </div>
-                <!-- Right Image Column -->
-                <div class="table-cell image-column">
-                    <img src="messages_phones.png" alt="Catchhub Chat Messages" class="section-img img-messages">
-                </div>
+        <!-- ================= CHANNELS SECTION ================= -->
+        <section class="section channels-section reverse-layout">
+            <div class="content-side">
+                <h2 class="section-title">CHANNELS</h2>
+                <p class="section-desc">
+                    Enjoy the videos and music you love.<br>
+                    Create your own business<br>
+                    or entertainment channel.
+                </p>
             </div>
-        </div>
-    </section>
-
-    <!-- IN FUTURE SECTION -->
-    <section class="section white-bg text-dark">
-        <div class="container layout-table">
-            <div class="table-row">
-                <!-- Left Image Column -->
-                <div class="table-cell image-column">
-                    <img src="future_phones.png" alt="Catchhub Future Features" class="section-img img-future">
-                </div>
-                <!-- Right Content Column -->
-                <div class="table-cell content-column text-center">
-                    <!-- Inline Row of Circular Feature Icons -->
-                    <div class="features-icon-row">
-                        <span class="icon-circle"><span class="inner-icon">⭐</span></span>
-                        <span class="icon-circle"><span class="inner-icon">💬</span></span>
-                        <span class="icon-circle"><span class="inner-icon">🔔</span></span>
-                        <span class="icon-circle"><span class="inner-icon">📅</span></span>
-                        <span class="icon-circle"><span class="inner-icon">✉️</span></span>
-                        <span class="icon-circle"><span class="inner-icon">🏠</span></span>
-                        <span class="icon-circle"><span class="inner-icon">🌐</span></span>
-                    </div>
-                    
-                    <h2 class="section-heading tracking-wide">IN <span class="highlight-text">FUTURE</span></h2>
-                    <p class="section-description">
-                        Communicate seamlessly.<br>
-                        Create your own professional<br>
-                        or social group chat.
-                    </p>
-                </div>
+            <div class="image-side">
+                <img src="channels_phones.png" alt="Channels Phones" class="responsive-img">
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER SECTION -->
-    <footer class="footer-section">
-        <div class="footer-container">
+        <!-- ================= MESSAGES SECTION ================= -->
+        <section class="section messages-section">
+            <div class="content-side">
+                <h2 class="section-title">MESSAGES</h2>
+                <p class="section-desc">
+                    Communicate seamlessly.<br>
+                    Create your own professional<br>
+                    or social group chat
+                </p>
+            </div>
+            <div class="image-side">
+                <img src="messages_phones.png" alt="Messages Phones" class="responsive-img">
+            </div>
+        </section>
+
+        <!-- ================= FUTURE SECTION ================= -->
+        <section class="section future-section reverse-layout">
+            <div class="content-side">
+                <!-- Feature Icons Placeholder Row matching the reference layout -->
+                <div class="feature-icons-row">
+                    <span class="icon-placeholder">🌐</span>
+                    <span class="icon-placeholder">🛡️</span>
+                    <span class="icon-placeholder">📊</span>
+                    <span class="icon-placeholder">🔒</span>
+                    <span class="icon-placeholder">🚀</span>
+                </div>
+                <h2 class="section-title">IN FUTURE</h2>
+                <p class="section-desc">
+                    Communicate seamlessly.<br>
+                    Create your own professional<br>
+                    or social group chat
+                </p>
+            </div>
+            <div class="image-side">
+                <img src="future_phones.png" alt="Future Phones" class="responsive-img">
+            </div>
+        </section>
+
+        <!-- ================= FOOTER SECTION ================= -->
+        <footer class="footer-section">
             <p class="footer-download-text">For download click here:</p>
-            <div class="footer-badge-container">
-                <a href="#" class="badge-link"><img src="btn_android.png" alt="Available on Android" class="store-badge"></a>
-                <a href="#" class="badge-link"><img src="btn_apple.png" alt="Available on Apple Store" class="store-badge"></a>
+            <div class="download-buttons footer-btns">
+                <a href="#" class="btn-link"><img src="btn_android.png" alt="Available on Android"></a>
+                <a href="#" class="btn-link"><img src="btn_apple.png" alt="Available on Apple Store"></a>
             </div>
-            
-            <p class="footer-contact-text">Any questions? Feel free to <a href="#" class="contact-link">CONTACT US</a></p>
-            
-            <div class="footer-branding">
+            <p class="contact-text">Any questions? Feel free to <a href="#" class="contact-link">CONTACT US</a></p>
+            <div class="footer-logo-container">
                 <img src="peratude_logo.png" alt="Peratude Logo" class="footer-logo">
             </div>
-        </div>
-    </footer>
+        </footer>
+
+    </div>
 
 </body>
 </html>
-          
