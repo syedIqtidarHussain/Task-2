@@ -1,12 +1,12 @@
-/*==========================================
-            GOOGLE FONT
-==========================================*/
+/*==================================================
+                GOOGLE FONT
+==================================================*/
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
-/*==========================================
-              RESET
-==========================================*/
+/*==================================================
+                    RESET
+==================================================*/
 
 *{
     margin:0;
@@ -21,7 +21,7 @@ html{
 body{
     font-family:'Montserrat',sans-serif;
     background:#ffffff;
-    color:#2b2b2b;
+    color:#333;
     overflow-x:hidden;
 }
 
@@ -35,142 +35,134 @@ a{
 }
 
 .container{
-    width:1180px;
-    max-width:92%;
+    width:1200px;
+    max-width:1200px;
     margin:auto;
 }
 
-/*==========================================
-             HERO SECTION
-==========================================*/
+/*==================================================
+                  HERO SECTION
+==================================================*/
 
 .hero{
+
     width:100%;
-    padding:70px 0 90px;
+
+    padding:60px 0 90px;
 }
 
 .hero .container{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 }
 
-/* LEFT SIDE */
-
 .hero-text{
+
     width:42%;
 }
 
 .logo{
-    width:250px;
-    margin-bottom:55px;
+
+    width:230px;
+
+    margin-bottom:45px;
 }
 
 .hero-text h1{
 
     font-size:58px;
 
-    font-weight:700;
+    font-weight:800;
 
     line-height:72px;
 
     letter-spacing:2px;
 
-    color:#343434;
+    color:#2f2f2f;
 
-    margin-bottom:22px;
+    margin-bottom:20px;
 }
 
 .hero-text p{
 
-    font-size:24px;
+    font-size:22px;
 
-    color:#7c7c7c;
+    color:#777;
 
-    margin-bottom:45px;
-
-    font-weight:400;
+    margin-bottom:40px;
 }
-
-/* BUTTONS */
 
 .store-buttons{
 
     display:flex;
 
-    align-items:center;
-
     gap:18px;
-}
-
-.store-buttons a{
-
-    display:inline-block;
 }
 
 .store-buttons img{
 
-    width:185px;
-
-    transition:.35s;
+    width:180px;
 }
-
-.store-buttons img:hover{
-
-    transform:translateY(-4px);
-}
-
-/* RIGHT SIDE */
 
 .hero-image{
 
-    width:50%;
+    width:52%;
 
-    display:flex;
-
-    justify-content:flex-end;
+    text-align:right;
 }
 
 .hero-image img{
 
-    width:100%;
+    width:560px;
 
-    max-width:560px;
-}/*==========================================
-            CHANNELS SECTION
-==========================================*/
+    margin-left:auto;
+}/*==================================================
+                CHANNELS SECTION
+==================================================*/
 
 .channels{
+
     width:100%;
-    padding:90px 0;
+
+    padding:110px 0;
 }
 
 .channels .container{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-    gap:70px;
 }
 
 /* LEFT IMAGE */
 
 .channels-image{
+
     width:52%;
-    display:flex;
-    justify-content:flex-start;
-    align-items:center;
 }
 
 .channels-image img{
-    width:100%;
-    max-width:560px;
-    transition:.35s ease;
+
+    width:560px;
+
+    margin-right:auto;
+
+    filter:drop-shadow(0 25px 35px rgba(0,0,0,.12));
 }
 
 /* RIGHT CONTENT */
 
 .channels-content{
-    width:40%;
+
+    width:38%;
+
+    text-align:left;
 }
 
 .channels-content h2{
@@ -179,9 +171,9 @@ a{
 
     font-weight:700;
 
-    letter-spacing:2px;
+    letter-spacing:3px;
 
-    color:#333333;
+    color:#333;
 
     margin-bottom:28px;
 }
@@ -190,57 +182,65 @@ a{
 
     font-size:22px;
 
-    line-height:42px;
+    color:#808080;
 
-    color:#7d7d7d;
+    line-height:42px;
 
     font-weight:400;
 }
 
-/* Hover Effect */
+/*==================================
+        SPACING FIX
+==================================*/
 
-.channels-image img:hover{
-
-    transform:scale(1.02);
-}
-
-.channels-content h2::after{
-
-    content:"";
+.channels-content p br{
 
     display:block;
 
-    width:70px;
+    margin-bottom:4px;
+}
 
-    height:4px;
+/*==================================
+      IMAGE HOVER
+==================================*/
 
-    background:#21d07a;
+.channels-image img{
 
-    margin-top:14px;
+    transition:.35s;
+}
 
-    border-radius:10px;
-}/*==========================================
-            MESSAGES SECTION
-==========================================*/
+.channels-image img:hover{
+
+    transform:translateY(-4px);
+}/*==================================================
+                MESSAGES SECTION
+==================================================*/
 
 .messages{
+
     width:100%;
+
     padding:110px 0;
+
     background:#ffffff;
 }
 
 .messages .container{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-    gap:80px;
 }
 
 /* LEFT CONTENT */
 
 .messages-content{
-    width:40%;
-    order:1;
+
+    width:38%;
+
+    text-align:left;
 }
 
 .messages-content h2{
@@ -249,37 +249,20 @@ a{
 
     font-weight:700;
 
-    color:#333;
+    letter-spacing:3px;
 
-    letter-spacing:2px;
+    color:#333333;
 
-    margin-bottom:30px;
-}
-
-.messages-content h2::after{
-
-    content:"";
-
-    display:block;
-
-    width:70px;
-
-    height:4px;
-
-    background:#21d07a;
-
-    border-radius:10px;
-
-    margin-top:14px;
+    margin-bottom:28px;
 }
 
 .messages-content p{
 
     font-size:22px;
 
-    line-height:42px;
+    color:#808080;
 
-    color:#7a7a7a;
+    line-height:42px;
 
     font-weight:400;
 }
@@ -287,76 +270,87 @@ a{
 /* RIGHT IMAGE */
 
 .messages-image{
+
     width:52%;
-    order:2;
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
+
+    text-align:right;
 }
 
 .messages-image img{
 
-    width:100%;
+    width:560px;
 
-    max-width:560px;
+    margin-left:auto;
 
-    transition:0.35s ease;
+    filter:drop-shadow(0 25px 35px rgba(0,0,0,.12));
+
+    transition:.35s;
 }
 
 .messages-image img:hover{
 
-    transform:scale(1.02);
+    transform:translateY(-4px);
 }
 
-/* SPACING */
+/* TEXT SPACING */
 
 .messages-content p br{
+
     display:block;
-    margin-bottom:3px;
-}/*==========================================
-              FUTURE SECTION
-==========================================*/
+
+    margin-bottom:4px;
+}/*==================================================
+                FUTURE SECTION
+==================================================*/
 
 .future{
+
     width:100%;
-    padding:120px 0;
+
+    padding:110px 0;
+
     background:#ffffff;
 }
 
 .future .container{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-    gap:80px;
 }
 
 /* LEFT IMAGE */
 
 .future-image{
+
     width:52%;
-    display:flex;
-    justify-content:flex-start;
-    align-items:center;
 }
 
 .future-image img{
 
-    width:100%;
+    width:560px;
 
-    max-width:560px;
+    margin-right:auto;
+
+    filter:drop-shadow(0 25px 35px rgba(0,0,0,.12));
 
     transition:.35s ease;
 }
 
 .future-image img:hover{
 
-    transform:scale(1.02);
+    transform:translateY(-4px);
 }
 
 /* RIGHT CONTENT */
 
 .future-content{
-    width:40%;
+
+    width:38%;
+
+    text-align:left;
 }
 
 .future-content h2{
@@ -365,71 +359,80 @@ a{
 
     font-weight:700;
 
+    letter-spacing:3px;
+
     color:#333333;
 
-    letter-spacing:2px;
-
-    margin-bottom:30px;
-
-    text-transform:uppercase;
-}
-
-.future-content h2::after{
-
-    content:"";
-
-    display:block;
-
-    width:70px;
-
-    height:4px;
-
-    margin-top:15px;
-
-    border-radius:20px;
-
-    background:#21d07a;
+    margin-bottom:28px;
 }
 
 .future-content p{
 
     font-size:22px;
 
-    line-height:42px;
+    color:#808080;
 
-    color:#7b7b7b;
+    line-height:42px;
 
     font-weight:400;
 }
-
-/* IMAGE EFFECT */
-
-.future-image img{
-
-    filter:drop-shadow(0 22px 35px rgba(0,0,0,.12));
-}
-
-/* CONTENT SPACING */
 
 .future-content p br{
 
     display:block;
 
-    margin-bottom:3px;
-}/*==========================================
-        DOWNLOAD SECTION
-==========================================*/
+    margin-bottom:4px;
+}
+
+/* SECTION GAP */
+
+.channels,
+.messages,
+.future{
+
+    position:relative;
+}
+
+.channels::after,
+.messages::after{
+
+    content:"";
+
+    display:block;
+
+    width:100%;
+
+    height:1px;
+
+    background:#f5f5f5;
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+}/*==================================================
+              DOWNLOAD SECTION
+==================================================*/
 
 .download{
+
     width:100%;
+
     padding:120px 0 70px;
+
     background:#ffffff;
+
     text-align:center;
 }
 
 .download .container{
-    max-width:900px;
-    margin:0 auto;
+
+    width:1200px;
+
+    max-width:1200px;
+
+    margin:auto;
 }
 
 .download h3{
@@ -438,14 +441,10 @@ a{
 
     font-weight:600;
 
-    color:#3b3b3b;
-
-    letter-spacing:1px;
+    color:#333;
 
     margin-bottom:45px;
 }
-
-/* STORE BUTTONS */
 
 .download .store-buttons{
 
@@ -457,44 +456,41 @@ a{
 
     gap:25px;
 
-    margin-bottom:55px;
-}
-
-.download .store-buttons a{
-
-    display:inline-block;
+    margin-bottom:45px;
 }
 
 .download .store-buttons img{
 
-    width:210px;
+    width:190px;
 
-    transition:.35s ease;
+    transition:.3s ease;
 }
 
 .download .store-buttons img:hover{
 
     transform:translateY(-5px);
 
-    filter:drop-shadow(0 12px 20px rgba(0,0,0,.18));
+    filter:drop-shadow(0 12px 18px rgba(0,0,0,.18));
 }
 
-/* CONTACT */
+/*==============================
+        CONTACT TEXT
+==============================*/
 
 .contact{
 
-    font-size:21px;
+    font-size:20px;
 
-    color:#7a7a7a;
-
-    font-weight:400;
+    color:#7b7b7b;
 
     margin-bottom:45px;
+
+    font-weight:400;
 }
 
 .contact span{
 
-    color:#18c76f;
+    color:#1ac96f;
 
     font-weight:700;
 
@@ -505,18 +501,18 @@ a{
 
 .contact span:hover{
 
-    color:#0ca85b;
+    color:#14b862;
 }
 
-/* FOOTER LOGO */
+/*==============================
+          FOOTER LOGO
+==============================*/
 
 .footer-logo{
 
-    width:190px;
+    width:170px;
 
-    margin:0 auto;
-
-    opacity:.95;
+    margin:auto;
 
     transition:.35s;
 }
@@ -526,7 +522,9 @@ a{
     transform:scale(1.05);
 }
 
-/* EXTRA SPACING */
+/*==============================
+      FOOTER SPACING
+==============================*/
 
 .download::before{
 
@@ -541,46 +539,139 @@ a{
     background:#f2f2f2;
 
     margin-bottom:70px;
-}/*==========================================
-        RESPONSIVE DESIGN
-==========================================*/
+}
 
-@media (max-width:1200px){
+.download::after{
+
+    content:"";
+
+    display:block;
+
+    width:100%;
+
+    height:40px;
+}/*==================================================
+            FINAL DESKTOP POLISH
+==================================================*/
+
+section{
+    overflow:hidden;
+}
+
+.hero,
+.channels,
+.messages,
+.future,
+.download{
+    width:100%;
+}
+
+.hero .container,
+.channels .container,
+.messages .container,
+.future .container{
+
+    width:1200px;
+
+    max-width:1200px;
+
+    margin:0 auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+/* IMAGE SIZE */
+
+.hero-image img,
+.channels-image img,
+.messages-image img,
+.future-image img{
+
+    width:560px;
+
+    max-width:100%;
+}
+
+/* CONTENT WIDTH */
+
+.hero-text,
+.channels-content,
+.messages-content,
+.future-content{
+
+    max-width:430px;
+}
+
+/* HEADING */
+
+.hero h1{
+
+    color:#303030;
+
+    font-weight:800;
+}
+
+.channels h2,
+.messages h2,
+.future h2{
+
+    color:#333;
+
+    font-weight:700;
+}
+
+/* PARAGRAPH */
+
+.hero p,
+.channels p,
+.messages p,
+.future p{
+
+    color:#7d7d7d;
+}
+
+/* BUTTONS */
+
+.store-buttons img{
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.store-buttons img:hover{
+
+    transform:translateY(-5px);
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:1200px){
 
 .container{
-    width:92%;
-}
 
-.hero-text h1{
-    font-size:52px;
-    line-height:66px;
-}
+    width:95%;
 
-.channels-content h2,
-.messages-content h2,
-.future-content h2{
-    font-size:42px;
-}
-
-.channels-content p,
-.messages-content p,
-.future-content p{
-    font-size:20px;
-    line-height:38px;
+    max-width:95%;
 }
 
 .hero-image img,
 .channels-image img,
 .messages-image img,
 .future-image img{
-    max-width:500px;
+
+    width:100%;
 }
 
 }
 
-/*================ TABLET ================*/
-
-@media (max-width:992px){
+@media(max-width:992px){
 
 .hero .container,
 .channels .container,
@@ -593,29 +684,22 @@ a{
 }
 
 .messages .container{
+
     flex-direction:column-reverse;
 }
 
 .hero-text,
 .hero-image,
-.channels-image,
 .channels-content,
+.channels-image,
 .messages-content,
 .messages-image,
-.future-image,
-.future-content{
-
-    width:100%;
-}
-
-.hero-image,
-.channels-image,
-.messages-image,
+.future-content,
 .future-image{
 
-    margin-top:60px;
+    width:100%;
 
-    justify-content:center;
+    max-width:100%;
 }
 
 .store-buttons{
@@ -623,61 +707,40 @@ a{
     justify-content:center;
 }
 
-.hero-text h1{
-
-    font-size:46px;
-
-    line-height:60px;
-}
-
+.hero-text,
 .channels-content,
 .messages-content,
 .future-content{
 
-    margin-top:40px;
-}
-
-.channels-content h2,
-.messages-content h2,
-.future-content h2::after{
-
-    margin-left:auto;
-    margin-right:auto;
+    text-align:center;
 }
 
 }
 
-/*================ MOBILE ================*/
+@media(max-width:768px){
 
-@media (max-width:768px){
+.hero h1{
 
-.hero{
-    padding:50px 0;
+    font-size:38px;
+
+    line-height:48px;
 }
 
-.channels,
-.messages,
-.future{
-    padding:70px 0;
-}
-
-.logo{
-    width:180px;
-    margin:0 auto 35px;
-}
-
-.hero-text h1{
+.channels h2,
+.messages h2,
+.future h2{
 
     font-size:34px;
-
-    line-height:46px;
-
-    letter-spacing:1px;
 }
 
-.hero-text p{
+.hero p,
+.channels p,
+.messages p,
+.future p{
 
     font-size:18px;
+
+    line-height:30px;
 }
 
 .store-buttons{
@@ -689,38 +752,12 @@ a{
 
 .store-buttons img{
 
-    width:180px;
-}
-
-.channels-content h2,
-.messages-content h2,
-.future-content h2{
-
-    font-size:32px;
-}
-
-.channels-content p,
-.messages-content p,
-.future-content p{
-
-    font-size:18px;
-
-    line-height:32px;
-}
-
-.download{
-
-    padding:80px 0 50px;
+    width:170px;
 }
 
 .download h3{
 
     font-size:24px;
-}
-
-.contact{
-
-    font-size:17px;
 }
 
 .footer-logo{
@@ -730,82 +767,11 @@ a{
 
 }
 
-/*============= SMALL MOBILE =============*/
-
-@media (max-width:480px){
-
-.container{
-
-    width:94%;
-}
-
-.hero-text h1{
-
-    font-size:28px;
-
-    line-height:38px;
-}
-
-.hero-text p{
-
-    font-size:16px;
-}
-
-.channels-content h2,
-.messages-content h2,
-.future-content h2{
-
-    font-size:26px;
-}
-
-.channels-content p,
-.messages-content p,
-.future-content p{
-
-    font-size:16px;
-
-    line-height:28px;
-}
-
-.store-buttons img{
-
-    width:160px;
-}
-
-.download h3{
-
-    font-size:20px;
-}
-
-.footer-logo{
-
-    width:120px;
-}
-
-}
-
-/*==========================================
-            FINAL POLISH
-==========================================*/
-
-.hero,
-.channels,
-.messages,
-.future,
-.download{
-    overflow:hidden;
-}
-
-.hero img,
-.channels img,
-.messages img,
-.future img,
-.footer-logo{
-    user-select:none;
-}
-
 body{
+
     overflow-x:hidden;
+
     -webkit-font-smoothing:antialiased;
+
     -moz-osx-font-smoothing:grayscale;
-    }
+}
