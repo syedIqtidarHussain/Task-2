@@ -1,777 +1,174 @@
-/*==================================================
-                GOOGLE FONT
-==================================================*/
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
-
-/*==================================================
-                    RESET
-==================================================*/
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Montserrat',sans-serif;
-    background:#ffffff;
-    color:#333;
-    overflow-x:hidden;
-}
-
-img{
-    display:block;
-    max-width:100%;
-}
-
-a{
-    text-decoration:none;
-}
-
-.container{
-    width:1200px;
-    max-width:1200px;
-    margin:auto;
-}
-
-/*==================================================
-                  HERO SECTION
-==================================================*/
-
-.hero{
-
-    width:100%;
-
-    padding:60px 0 90px;
-}
-
-.hero .container{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-}
-
-.hero-text{
-
-    width:42%;
-}
-
-.logo{
-
-    width:230px;
-
-    margin-bottom:45px;
-}
-
-.hero-text h1{
-
-    font-size:58px;
-
-    font-weight:800;
-
-    line-height:72px;
-
-    letter-spacing:2px;
-
-    color:#2f2f2f;
-
-    margin-bottom:20px;
-}
-
-.hero-text p{
-
-    font-size:22px;
-
-    color:#777;
-
-    margin-bottom:40px;
-}
-
-.store-buttons{
-
-    display:flex;
-
-    gap:18px;
-}
-
-.store-buttons img{
-
-    width:180px;
-}
-
-.hero-image{
-
-    width:52%;
-
-    text-align:right;
-}
-
-.hero-image img{
-
-    width:560px;
-
-    margin-left:auto;
-}/*==================================================
-                CHANNELS SECTION
-==================================================*/
-
-.channels{
-
-    width:100%;
-
-    padding:110px 0;
-}
-
-.channels .container{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-}
-
-/* LEFT IMAGE */
-
-.channels-image{
-
-    width:52%;
-}
-
-.channels-image img{
-
-    width:560px;
-
-    margin-right:auto;
-
-    filter:drop-shadow(0 25px 35px rgba(0,0,0,.12));
-}
-
-/* RIGHT CONTENT */
-
-.channels-content{
-
-    width:38%;
-
-    text-align:left;
-}
-
-.channels-content h2{
-
-    font-size:48px;
-
-    font-weight:700;
-
-    letter-spacing:3px;
-
-    color:#333;
-
-    margin-bottom:28px;
-}
-
-.channels-content p{
-
-    font-size:22px;
-
-    color:#808080;
-
-    line-height:42px;
-
-    font-weight:400;
-}
-
-/*==================================
-        SPACING FIX
-==================================*/
-
-.channels-content p br{
-
-    display:block;
-
-    margin-bottom:4px;
-}
-
-/*==================================
-      IMAGE HOVER
-==================================*/
-
-.channels-image img{
-
-    transition:.35s;
-}
-
-.channels-image img:hover{
-
-    transform:translateY(-4px);
-}/*==================================================
-                MESSAGES SECTION
-==================================================*/
-
-.messages{
-
-    width:100%;
-
-    padding:110px 0;
-
-    background:#ffffff;
-}
-
-.messages .container{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-}
-
-/* LEFT CONTENT */
-
-.messages-content{
-
-    width:38%;
-
-    text-align:left;
-}
-
-.messages-content h2{
-
-    font-size:48px;
-
-    font-weight:700;
-
-    letter-spacing:3px;
-
-    color:#333333;
-
-    margin-bottom:28px;
-}
-
-.messages-content p{
-
-    font-size:22px;
-
-    color:#808080;
-
-    line-height:42px;
-
-    font-weight:400;
-}
-
-/* RIGHT IMAGE */
-
-.messages-image{
-
-    width:52%;
-
-    text-align:right;
-}
-
-.messages-image img{
-
-    width:560px;
-
-    margin-left:auto;
-
-    filter:drop-shadow(0 25px 35px rgba(0,0,0,.12));
-
-    transition:.35s;
-}
-
-.messages-image img:hover{
-
-    transform:translateY(-4px);
-}
-
-/* TEXT SPACING */
-
-.messages-content p br{
-
-    display:block;
-
-    margin-bottom:4px;
-}/*==================================================
-                FUTURE SECTION
-==================================================*/
-
-.future{
-
-    width:100%;
-
-    padding:110px 0;
-
-    background:#ffffff;
-}
-
-.future .container{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-}
-
-/* LEFT IMAGE */
-
-.future-image{
-
-    width:52%;
-}
-
-.future-image img{
-
-    width:560px;
-
-    margin-right:auto;
-
-    filter:drop-shadow(0 25px 35px rgba(0,0,0,.12));
-
-    transition:.35s ease;
-}
-
-.future-image img:hover{
-
-    transform:translateY(-4px);
-}
-
-/* RIGHT CONTENT */
-
-.future-content{
-
-    width:38%;
-
-    text-align:left;
-}
-
-.future-content h2{
-
-    font-size:48px;
-
-    font-weight:700;
-
-    letter-spacing:3px;
-
-    color:#333333;
-
-    margin-bottom:28px;
-}
-
-.future-content p{
-
-    font-size:22px;
-
-    color:#808080;
-
-    line-height:42px;
-
-    font-weight:400;
-}
-
-.future-content p br{
-
-    display:block;
-
-    margin-bottom:4px;
-}
-
-/* SECTION GAP */
-
-.channels,
-.messages,
-.future{
-
-    position:relative;
-}
-
-.channels::after,
-.messages::after{
-
-    content:"";
-
-    display:block;
-
-    width:100%;
-
-    height:1px;
-
-    background:#f5f5f5;
-
-    position:absolute;
-
-    bottom:0;
-
-    left:0;
-}/*==================================================
-              DOWNLOAD SECTION
-==================================================*/
-
-.download{
-
-    width:100%;
-
-    padding:120px 0 70px;
-
-    background:#ffffff;
-
-    text-align:center;
-}
-
-.download .container{
-
-    width:1200px;
-
-    max-width:1200px;
-
-    margin:auto;
-}
-
-.download h3{
-
-    font-size:34px;
-
-    font-weight:600;
-
-    color:#333;
-
-    margin-bottom:45px;
-}
-
-.download .store-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:25px;
-
-    margin-bottom:45px;
-}
-
-.download .store-buttons img{
-
-    width:190px;
-
-    transition:.3s ease;
-}
-
-.download .store-buttons img:hover{
-
-    transform:translateY(-5px);
-
-    filter:drop-shadow(0 12px 18px rgba(0,0,0,.18));
-}
-
-/*==============================
-        CONTACT TEXT
-==============================*/
-
-.contact{
-
-    font-size:20px;
-
-    color:#7b7b7b;
-
-    margin-bottom:45px;
-
-    font-weight:400;
-}
-
-.contact span{
-
-    color:#1ac96f;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-.contact span:hover{
-
-    color:#14b862;
-}
-
-/*==============================
-          FOOTER LOGO
-==============================*/
-
-.footer-logo{
-
-    width:170px;
-
-    margin:auto;
-
-    transition:.35s;
-}
-
-.footer-logo:hover{
-
-    transform:scale(1.05);
-}
-
-/*==============================
-      FOOTER SPACING
-==============================*/
-
-.download::before{
-
-    content:"";
-
-    display:block;
-
-    width:100%;
-
-    height:1px;
-
-    background:#f2f2f2;
-
-    margin-bottom:70px;
+/* RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.download::after{
-
-    content:"";
-
-    display:block;
-
-    width:100%;
-
-    height:40px;
-}/*==================================================
-            FINAL DESKTOP POLISH
-==================================================*/
-
-section{
-    overflow:hidden;
+body {
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
 }
 
-.hero,
-.channels,
-.messages,
-.future,
-.download{
-    width:100%;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
 }
-
-.hero .container,
-.channels .container,
-.messages .container,
-.future .container{
-
-    width:1200px;
-
-    max-width:1200px;
-
-    margin:0 auto;
-
-    display:flex;
-
-    align-items:center;
 
-    justify-content:space-between;
+/* HERO SECTION */
+.hero-section {
+    padding: 50px 0;
 }
 
-/* IMAGE SIZE */
-
-.hero-image img,
-.channels-image img,
-.messages-image img,
-.future-image img{
-
-    width:560px;
-
-    max-width:100%;
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
 }
-
-/* CONTENT WIDTH */
-
-.hero-text,
-.channels-content,
-.messages-content,
-.future-content{
 
-    max-width:430px;
+.hero-left {
+    flex: 1;
 }
 
-/* HEADING */
-
-.hero h1{
-
-    color:#303030;
-
-    font-weight:800;
+.main-logo {
+    max-width: 220px;
+    margin-bottom: 20px;
 }
-
-.channels h2,
-.messages h2,
-.future h2{
-
-    color:#333;
 
-    font-weight:700;
+.hero-left h1 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 5px;
 }
 
-/* PARAGRAPH */
-
-.hero p,
-.channels p,
-.messages p,
-.future p{
-
-    color:#7d7d7d;
+.subtitle {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 15px;
 }
-
-/* BUTTONS */
-
-.store-buttons img{
-
-    cursor:pointer;
 
-    transition:.3s ease;
+.hero-right {
+    flex: 1;
+    text-align: right;
 }
 
-.store-buttons img:hover{
-
-    transform:translateY(-5px);
+.mockup-img {
+    max-width: 100%;
+    height: auto;
 }
-
-/*=========================================
-            RESPONSIVE
-=========================================*/
-
-@media(max-width:1200px){
-
-.container{
-
-    width:95%;
 
-    max-width:95%;
+/* STORE BUTTONS */
+.store-buttons {
+    display: flex;
+    gap: 12px;
 }
 
-.hero-image img,
-.channels-image img,
-.messages-image img,
-.future-image img{
-
-    width:100%;
+.store-buttons.center {
+    justify-content: center;
 }
 
+.store-buttons img {
+    height: 40px;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
 }
-
-@media(max-width:992px){
 
-.hero .container,
-.channels .container,
-.messages .container,
-.future .container{
-
-    flex-direction:column;
-
-    text-align:center;
+.store-buttons img:hover {
+    transform: translateY(-2px);
 }
-
-.messages .container{
 
-    flex-direction:column-reverse;
+/* FEATURE SECTIONS (CHANNELS, MESSAGES, IN FUTURE) */
+.feature-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 80px 0;
+    gap: 50px;
 }
 
-.hero-text,
-.hero-image,
-.channels-content,
-.channels-image,
-.messages-content,
-.messages-image,
-.future-content,
-.future-image{
-
-    width:100%;
-
-    max-width:100%;
+.feature-section.reverse {
+    flex-direction: row;
 }
 
-.store-buttons{
-
-    justify-content:center;
+.feature-img {
+    flex: 1;
+    text-align: center;
 }
 
-.hero-text,
-.channels-content,
-.messages-content,
-.future-content{
-
-    text-align:center;
+.feature-img img {
+    max-width: 100%;
+    height: auto;
 }
 
+.feature-text {
+    flex: 1;
 }
-
-@media(max-width:768px){
 
-.hero h1{
-
-    font-size:38px;
-
-    line-height:48px;
+.feature-text h2 {
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #222;
 }
 
-.channels h2,
-.messages h2,
-.future h2{
-
-    font-size:34px;
+.feature-text p {
+    color: #666;
+    font-size: 16px;
+    max-width: 400px;
 }
-
-.hero p,
-.channels p,
-.messages p,
-.future p{
-
-    font-size:18px;
 
-    line-height:30px;
+/* FOOTER SECTION */
+.footer-section {
+    text-align: center;
+    padding: 60px 20px 30px;
 }
 
-.store-buttons{
-
-    flex-direction:column;
-
-    gap:15px;
+.download-label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
 }
-
-.store-buttons img{
 
-    width:170px;
+.contact-text {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666;
 }
 
-.download h3{
-
-    font-size:24px;
+.contact-text a {
+    color: #0088cc;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.footer-logo{
-
-    width:140px;
+.footer-logo {
+    margin-top: 30px;
 }
 
+.footer-logo img {
+    height: 45px;
 }
-
-body{
 
-    overflow-x:hidden;
+/* RESPONSIVE LAYOUT (FOR MOBILE & TABLETS) */
+@media (max-width: 768px) {
+    .hero-content, 
+    .feature-section, 
+    .feature-section.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
 
-    -webkit-font-smoothing:antialiased;
+    .hero-right, .feature-text p {
+        margin: 0 auto;
+    }
 
-    -moz-osx-font-smoothing:grayscale;
+    .store-buttons {
+        justify-content: center;
+    }
 }
