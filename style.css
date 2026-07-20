@@ -1,232 +1,280 @@
-:root{
-  --ink:#242424;
-  --gray:#8f8f8f;
-  --gray-light:#a9a9a9;
-  --bg-gray:#eef0f2;
-  --bg-gray2:#e4e6e8;
-  --blue:#4f9be0;
-  --android:#a4c639;
-  --divider:#dcdfe2;
-}
-*{box-sizing:border-box; margin:0; padding:0;}
-html{scroll-behavior:smooth;}
-body{
-  font-family:'Poppins', sans-serif;
-  color:var(--ink);
-  background:#ffffff;
-  overflow-x:hidden;
-}
-img{max-width:100%; display:block;}
-.wrap{
-  max-width:1400px;
-  margin:0 auto;
-  padding:0 60px;
+/* ==========================================================================
+   CATCHHUB DYNAMIC STYLESHEET
+   Pure Layout Blocks using Table-Cell models for perfect layout integrity
+   ========================================================================== */
+
+/* Reset & Core Setup */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-/* ---------- HERO ---------- */
-.hero{
-  position:relative;
-  background:linear-gradient(135deg,#eef0f2 0%,#e7e9eb 55%,#ffffff 100%);
-  padding:90px 0 120px;
-  overflow:hidden;
-}
-.hero::after{
-  content:"";
-  position:absolute;
-  left:0; right:0; bottom:-2px;
-  height:140px;
-  background:#fff;
-  clip-path: polygon(0 100%, 100% 40%, 100% 100%);
-}
-.hero .wrap{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:40px;
-  position:relative;
-  z-index:2;
-}
-.hero-left{ max-width:520px; flex:0 0 auto; }
-.logo-img{ width:340px; margin-bottom:18px; }
-.tagline{
-  font-size:26px;
-  font-weight:700;
-  letter-spacing:2.5px;
-  color:#2a2a2a;
-  margin-bottom:10px;
-}
-.subtagline{
-  font-size:21px;
-  font-weight:400;
-  color:var(--gray);
-  margin-bottom:46px;
-}
-.store-buttons{
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-}
-.store-buttons img{ height:56px; width:auto; }
-.hero-right{ flex:1 1 auto; max-width:820px; }
-.hero-right img{ width:100%; }
-.logo-img{ }
-
-/* ---------- CHANNELS ---------- */
-.channels{
-  position:relative;
-  background:#ffffff;
-  padding:70px 0 60px;
-}
-.channels .wrap{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:40px;
-}
-.channels-img{ flex:1 1 55%; max-width:760px; }
-.channels-text{
-  flex:1 1 35%;
-  text-align:right;
-  max-width:480px;
-}
-.section-title{
-  font-size:30px;
-  font-weight:700;
-  letter-spacing:6px;
-  color:#232323;
-  margin-bottom:26px;
-}
-.section-copy{
-  font-size:21px;
-  line-height:1.65;
-  color:var(--gray);
-  font-weight:400;
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
-/* ---------- MESSAGES ---------- */
-.messages{
-  position:relative;
-  background:linear-gradient(120deg,#eef0f2 0%,#e9ebed 60%,#ffffff 100%);
-  padding:80px 0 90px;
-  overflow:hidden;
+/* Master Waves Layout Background matching your design */
+body {
+    background-image: 
+        radial-gradient(circle at 90% 12%, rgba(240, 242, 245, 0.7) 0%, transparent 45%),
+        radial-gradient(circle at 10% 35%, rgba(244, 245, 247, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 85% 65%, rgba(238, 240, 244, 0.6) 0%, transparent 40%);
+    background-attachment: scroll;
 }
-.messages::before{
-  content:"";
-  position:absolute;
-  right:0; top:0; bottom:0;
-  width:38%;
-  background:#f4f5f6;
-  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-  z-index:0;
-}
-.messages .wrap{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:40px;
-  position:relative;
-  z-index:2;
-}
-.messages-text{
-  flex:1 1 35%;
-  text-align:left;
-  max-width:480px;
-}
-.messages-img{ flex:1 1 55%; max-width:760px; }
 
-/* ---------- IN FUTURE ---------- */
-.future{
-  position:relative;
-  background:#ffffff;
-  padding:90px 0 40px;
+/* Structural Components */
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-.future .wrap{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:30px;
-  flex-wrap:wrap;
-}
-.future-img{ flex:1 1 40%; max-width:520px; margin-top:10px; }
-.future-right{ flex:1 1 55%; max-width:760px; }
-.icon-row{
-  display:flex;
-  justify-content:flex-end;
-  gap:30px;
-  margin-bottom:56px;
-  flex-wrap:wrap;
-}
-.icon-item{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:10px;
-  width:74px;
-}
-.icon-circle{
-  width:64px; height:64px;
-  border-radius:50%;
-  border:1.5px solid #d7dadd;
-  display:flex; align-items:center; justify-content:center;
-  color:#c3c7cb;
-}
-.icon-circle svg{ width:26px; height:26px; stroke:#c3c7cb; fill:none; stroke-width:1.6; }
-.icon-label{ font-size:12px; color:#c3c7cb; font-weight:500; letter-spacing:.3px; }
-.future-text{ text-align:right; max-width:480px; margin-left:auto; }
 
-/* ---------- FOOTER ---------- */
-.footer{
-  background:linear-gradient(180deg,#ffffff 0%, #eef0f2 100%);
-  text-align:center;
-  padding:70px 20px 60px;
+.section {
+    padding: 90px 0;
+    width: 100%;
+    display: block;
+    clear: both;
 }
-.footer-lead{
-  font-size:24px;
-  color:#3a3a3a;
-  font-weight:500;
-  margin-bottom:26px;
-}
-.footer .store-buttons{ justify-content:center; margin-bottom:46px; }
-.footer-contact{
-  font-size:20px;
-  color:#3a3a3a;
-  font-weight:400;
-  margin-bottom:50px;
-}
-.footer-contact a{
-  color:var(--blue);
-  text-decoration:none;
-  font-weight:500;
-}
-.footer-contact a:hover{ text-decoration:underline; }
-.peratude-logo{ width:120px; margin:0 auto; opacity:.92; }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width:1100px){
-  .wrap{ padding:0 32px; }
-  .tagline{ font-size:21px; }
-  .subtagline{ font-size:17px; margin-bottom:32px;}
-  .section-title{ font-size:24px; letter-spacing:4px; }
-  .section-copy{ font-size:17px; }
+/* Layout Engine (Ensures perfect visual sync without shifting) */
+.layout-table {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
 }
-@media (max-width:900px){
-  .hero .wrap, .channels .wrap, .messages .wrap, .future .wrap{
-    flex-direction:column;
-    text-align:center;
-  }
-  .hero-left{ max-width:100%; text-align:center; }
-  .store-buttons{ justify-content:center; }
-  .channels-text, .messages-text, .future-text{
-    text-align:center; max-width:100%; margin:0 auto;
-  }
-  .icon-row{ justify-content:center; }
-  .messages::before{ display:none; }
-  .logo-img{ margin:0 auto 18px; }
+
+.table-row {
+    display: table-row;
 }
-@media (max-width:520px){
-  .tagline{ font-size:17px; letter-spacing:1.5px;}
-  .subtagline{ font-size:15px; }
-  .section-title{ font-size:20px; letter-spacing:3px; }
-  .section-copy{ font-size:15px; }
-  .store-buttons img{ height:44px; }
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+/* Typography Alignments */
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Hero UI Elements */
+.hero-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.main-logo {
+    display: block;
+    width: 210px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.hero-tagline {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #2b2b2b;
+    margin: 0 0 8px 0;
+}
+
+.hero-subtext {
+    font-size: 15px;
+    color: #707070;
+    margin: 0 0 35px 0;
+    font-weight: 400;
+}
+
+/* Badges System */
+.badge-container {
+    display: block;
+    margin-top: 15px;
+}
+
+.badge-link {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+.store-badge {
+    height: 42px;
+    width: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+/* Image Presentation & Control */
+.image-column {
+    text-align: center;
+}
+
+.section-img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.img-hero {
+    max-width: 480px;
+}
+
+.img-channels {
+    max-width: 430px;
+}
+
+.img-messages {
+    max-width: 420px;
+}
+
+.img-future {
+    max-width: 440px;
+}
+
+/* Sub-sections Typography Styles */
+.tracking-wide {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #1a1a1a;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.highlight-text {
+    font-weight: 900;
+    color: #000000;
+}
+
+.section-description {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #666666;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Future Icons Row Layout */
+.features-icon-row {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.icon-circle {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    margin: 0 6px;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.inner-icon {
+    display: block;
+    font-size: 14px;
+    line-height: 34px;
+    color: #a0aec0;
+}
+
+/* Footer Assembly */
+.footer-section {
+    padding: 60px 0 30px 0;
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+    clear: both;
+}
+
+.footer-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-download-text {
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.footer-badge-container {
+    display: block;
+    margin-bottom: 35px;
+}
+
+.footer-badge-container .badge-link {
+    margin: 0 6px;
+}
+
+.footer-contact-text {
+    font-size: 13px;
+    color: #718096;
+    margin-bottom: 40px;
+}
+
+.contact-link {
+    color: #3182ce;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.footer-branding {
+    margin-top: 20px;
+    display: block;
+}
+
+.footer-logo {
+    width: 38px;
+    height: auto;
+    display: inline-block;
+}
+
+/* Responsive Overrides via Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .layout-table, .table-row, .table-cell {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .table-cell {
+        text-align: center !important;
+        padding: 25px 10px !important;
+    }
+    
+    .main-logo {
+        margin: 0 auto 20px auto;
+    }
+    
+    .section {
+        padding: 45px 0;
+    }
+    
+    .badge-link {
+        margin: 5px 6px;
+    }
 }
