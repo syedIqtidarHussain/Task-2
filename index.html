@@ -18,27 +18,28 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1050px;
             margin: 0 auto;
-            padding: 20px 20px;
+            padding: 40px 20px;
         }
 
-        /* HERO SECTION - UPER KAR DIYA */
+        /* HERO SECTION - LEFT ALIGNED AS ORIGINAL */
         .hero {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px 0 30px;
+            padding: 20px 0 60px;
         }
 
         .hero-left {
             flex: 1;
             max-width: 450px;
+            text-align: left;
         }
 
         .hero-left .logo {
             width: 220px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             display: block;
         }
 
@@ -53,12 +54,13 @@
         .hero-left p {
             font-size: 15px;
             color: #666666;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .store-btns {
             display: flex;
             gap: 12px;
+            justify-content: flex-start;
         }
 
         .store-btns img {
@@ -75,15 +77,15 @@
 
         .hero-right img {
             width: 100%;
-            max-width: 450px;
+            max-width: 480px;
         }
 
-        /* FEATURE SECTIONS - GAP KAM KAR KE UPER SHIFT KIYA */
+        /* FEATURE SECTIONS - PROPER SPACING & CENTERED TEXT */
         .feature {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 20px 0; /* Reduced padding from 50px/60px to 20px */
+            padding: 40px 0;
             gap: 30px;
         }
 
@@ -95,58 +97,56 @@
 
         .feature-img img {
             width: 100%;
-            max-width: 440px;
+            max-width: 460px;
         }
 
         .feature-text {
             flex: 0.9;
-            max-width: 260px; /* Tight width for forcing 3 lines */
             text-align: center;
-            margin: 0 auto;
         }
 
         /* HEADINGS */
         .feature-text h2 {
-            font-size: 19px;
+            font-size: 20px;
             font-weight: 700;
             letter-spacing: 5px;
             color: #1a1a1a;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             text-transform: uppercase;
         }
 
-        /* PARAGRAPH TEXT (FORCED 3 LINES MATCH) */
+        /* PARAGRAPH TEXT - EXACT 3 LINES */
         .feature-text p {
             font-size: 15px;
-            line-height: 1.4;
+            line-height: 1.45;
             color: #888888;
             font-weight: 400;
-            width: 250px;
+            max-width: 280px;
             margin: 0 auto;
             text-align: center;
         }
 
-        /* FOOTER - COMPACT SPACING */
+        /* FOOTER */
         footer {
             text-align: center;
-            padding: 30px 20px 20px;
+            padding: 50px 20px 30px;
         }
 
         footer p.download-title {
             font-size: 15px;
             color: #444;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         footer .store-btns {
             justify-content: center;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         footer .contact-text {
             font-size: 14px;
             color: #666;
-            margin-bottom: 25px;
+            margin-bottom: 35px;
         }
 
         footer .contact-text a {
@@ -156,7 +156,7 @@
         }
 
         footer .brand-logo img {
-            height: 42px;
+            height: 45px;
         }
 
         /* RESPONSIVE DESIGN */
@@ -164,11 +164,14 @@
             .hero, .feature {
                 flex-direction: column;
                 text-align: center;
-                padding: 15px 0;
+            }
+
+            .hero-left {
+                text-align: center;
             }
 
             .hero-left .logo {
-                margin: 0 auto 15px;
+                margin: 0 auto 20px;
             }
 
             .hero .store-btns, footer .store-btns {
@@ -177,10 +180,6 @@
 
             .feature.reverse {
                 flex-direction: column-reverse;
-            }
-
-            .feature-text {
-                max-width: 250px;
             }
         }
     </style>
