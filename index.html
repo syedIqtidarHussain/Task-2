@@ -9,84 +9,89 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
-            background: linear-gradient(180deg, #f0f1f5 0%, #ffffff 30%, #ebedf2 70%, #ffffff 100%);
+            background: linear-gradient(180deg, #f3f4f8 0%, #ffffff 30%, #f3f4f8 70%, #ffffff 100%);
             color: #333333;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 1050px;
+            max-width: 1140px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 50px 24px;
         }
 
-        /* HERO SECTION - LEFT ALIGNED AS ORIGINAL */
+        /* HERO SECTION */
         .hero {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 20px 0 60px;
+            padding: 20px 0 80px;
         }
 
         .hero-left {
             flex: 1;
-            max-width: 450px;
+            max-width: 480px;
             text-align: left;
         }
 
         .hero-left .logo {
-            width: 220px;
-            margin-bottom: 20px;
+            width: 250px;
+            margin-bottom: 24px;
             display: block;
         }
 
         .hero-left h1 {
-            font-size: 22px;
+            font-size: 25px;
             font-weight: 800;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.8px;
             color: #1a1a1a;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .hero-left p {
-            font-size: 15px;
+            font-size: 16px;
             color: #666666;
-            margin-bottom: 25px;
+            margin-bottom: 28px;
         }
 
+        /* STORE BUTTONS EXACT ALIGNMENT */
         .store-btns {
             display: flex;
             gap: 12px;
+            align-items: center;
             justify-content: flex-start;
         }
 
         .store-btns img {
-            height: 42px;
+            height: 48px;
+            width: auto;
             cursor: pointer;
             object-fit: contain;
+            display: block;
         }
 
         .hero-right {
-            flex: 1;
+            flex: 1.1;
             display: flex;
             justify-content: flex-end;
         }
 
         .hero-right img {
             width: 100%;
-            max-width: 480px;
+            max-width: 520px;
         }
 
-        /* FEATURE SECTIONS - PROPER SPACING & CENTERED TEXT */
+        /* FEATURE SECTIONS (CHANNELS, MESSAGES, IN FUTURE) */
         .feature {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 40px 0;
-            gap: 30px;
+            padding: 65px 0;
+            gap: 50px;
         }
 
         .feature-img {
@@ -97,31 +102,32 @@
 
         .feature-img img {
             width: 100%;
-            max-width: 460px;
+            max-width: 480px;
         }
 
         .feature-text {
             flex: 0.9;
             text-align: center;
+            padding: 0 10px;
         }
 
-        /* HEADINGS */
+        /* FEATURE HEADINGS */
         .feature-text h2 {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 700;
-            letter-spacing: 5px;
+            letter-spacing: 6px;
             color: #1a1a1a;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             text-transform: uppercase;
         }
 
-        /* PARAGRAPH TEXT - EXACT 3 LINES */
+        /* FEATURE PARAGRAPHS - MATCHING DENSITY */
         .feature-text p {
-            font-size: 15px;
-            line-height: 1.45;
-            color: #888888;
+            font-size: 17px;
+            line-height: 1.55;
+            color: #777777;
             font-weight: 400;
-            max-width: 280px;
+            max-width: 320px;
             margin: 0 auto;
             text-align: center;
         }
@@ -129,41 +135,43 @@
         /* FOOTER */
         footer {
             text-align: center;
-            padding: 50px 20px 30px;
+            padding: 70px 20px 40px;
         }
 
         footer p.download-title {
-            font-size: 15px;
-            color: #444;
-            margin-bottom: 18px;
+            font-size: 16px;
+            color: #444444;
+            margin-bottom: 20px;
+            font-weight: 500;
         }
 
         footer .store-btns {
             justify-content: center;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         footer .contact-text {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 35px;
+            font-size: 15px;
+            color: #666666;
+            margin-bottom: 40px;
         }
 
         footer .contact-text a {
             color: #0088cc;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
         }
 
         footer .brand-logo img {
-            height: 45px;
+            height: 48px;
         }
 
-        /* RESPONSIVE DESIGN */
+        /* RESPONSIVE DESIGN FOR MOBILE */
         @media (max-width: 768px) {
             .hero, .feature {
                 flex-direction: column;
                 text-align: center;
+                padding: 40px 0;
             }
 
             .hero-left {
