@@ -19,33 +19,34 @@
         }
 
         .container {
-            max-width: 1050px;
+            max-width: 1000px; /* Reduced container width so all elements line up perfectly */
             margin: 0 auto;
-            padding: 30px 20px;
+            padding: 40px 20px;
         }
 
-        /* HERO SECTION - VERTICALLY CENTERED */
+        /* HERO SECTION - EXACT VERTICAL ALIGNMENT WITH LOWER IMAGES */
         .hero {
             display: flex;
-            align-items: center; /* Left content ko right side image ke bilkul middle mein align karega */
+            align-items: center;
             justify-content: space-between;
-            padding: 20px 0 60px;
+            padding: 10px 0 50px;
         }
 
         .hero-left {
             flex: 1;
-            max-width: 440px;
+            max-width: 420px;
             text-align: left;
+            padding-left: 20px; /* Exact left offset to align with Channels image border */
         }
 
         .hero-left .logo {
-            width: 250px;
+            width: 240px;
             margin-bottom: 20px;
             display: block;
         }
 
         .hero-left h1 {
-            font-size: 23px;
+            font-size: 21px;
             font-weight: 800;
             letter-spacing: 1.5px;
             color: #1a1a1a;
@@ -83,7 +84,7 @@
 
         .hero-right img {
             width: 100%;
-            max-width: 500px;
+            max-width: 480px;
         }
 
         /* FEATURE SECTIONS */
@@ -91,8 +92,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 50px 0;
-            gap: 40px;
+            padding: 40px 0;
+            gap: 30px;
         }
 
         .feature-img {
@@ -136,7 +137,7 @@
         /* FOOTER */
         footer {
             text-align: center;
-            padding: 60px 20px 30px;
+            padding: 50px 20px 30px;
         }
 
         footer p.download-title {
@@ -177,6 +178,7 @@
 
             .hero-left {
                 text-align: center;
+                padding-left: 0;
             }
 
             .hero-left .logo {
