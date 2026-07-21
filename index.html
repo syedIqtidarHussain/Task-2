@@ -13,52 +13,54 @@
         }
 
         body {
-            background: linear-gradient(180deg, #f3f4f8 0%, #ffffff 30%, #f3f4f8 70%, #ffffff 100%);
+            background: linear-gradient(180deg, #f2f3f7 0%, #ffffff 30%, #f0f2f6 70%, #ffffff 100%);
             color: #333333;
             -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 1140px;
+            max-width: 1050px;
             margin: 0 auto;
-            padding: 50px 24px;
+            padding: 30px 20px;
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION - TOP ALIGNED NOW */
         .hero {
             display: flex;
-            align-items: center;
+            align-items: flex-start; /* FIX: Content ko upar (top) align karne ke liye */
             justify-content: space-between;
-            padding: 20px 0 80px;
+            padding: 10px 0 60px;
         }
 
         .hero-left {
             flex: 1;
-            max-width: 480px;
+            max-width: 440px;
             text-align: left;
+            padding-top: 15px; /* Alignment fine tuning */
         }
 
         .hero-left .logo {
-            width: 250px;
-            margin-bottom: 24px;
+            width: 260px;
+            margin-bottom: 20px;
             display: block;
         }
 
         .hero-left h1 {
-            font-size: 25px;
+            font-size: 23px;
             font-weight: 800;
-            letter-spacing: 1.8px;
+            letter-spacing: 1.5px;
             color: #1a1a1a;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
         }
 
         .hero-left p {
-            font-size: 16px;
+            font-size: 15px;
             color: #666666;
-            margin-bottom: 28px;
+            margin-bottom: 25px;
         }
 
-        /* STORE BUTTONS EXACT ALIGNMENT */
+        /* STORE BUTTONS ALIGNMENT */
         .store-btns {
             display: flex;
             gap: 12px;
@@ -82,16 +84,16 @@
 
         .hero-right img {
             width: 100%;
-            max-width: 520px;
+            max-width: 500px;
         }
 
-        /* FEATURE SECTIONS (CHANNELS, MESSAGES, IN FUTURE) */
+        /* FEATURE SECTIONS */
         .feature {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 65px 0;
-            gap: 50px;
+            padding: 50px 0;
+            gap: 40px;
         }
 
         .feature-img {
@@ -102,7 +104,7 @@
 
         .feature-img img {
             width: 100%;
-            max-width: 480px;
+            max-width: 460px;
         }
 
         .feature-text {
@@ -111,23 +113,23 @@
             padding: 0 10px;
         }
 
-        /* FEATURE HEADINGS */
+        /* HEADINGS */
         .feature-text h2 {
-            font-size: 22px;
+            font-size: 21px;
             font-weight: 700;
-            letter-spacing: 6px;
+            letter-spacing: 5px;
             color: #1a1a1a;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             text-transform: uppercase;
         }
 
-        /* FEATURE PARAGRAPHS - MATCHING DENSITY */
+        /* PARAGRAPH TEXT */
         .feature-text p {
-            font-size: 17px;
-            line-height: 1.55;
+            font-size: 16px;
+            line-height: 1.5;
             color: #777777;
             font-weight: 400;
-            max-width: 320px;
+            max-width: 300px;
             margin: 0 auto;
             text-align: center;
         }
@@ -135,25 +137,25 @@
         /* FOOTER */
         footer {
             text-align: center;
-            padding: 70px 20px 40px;
+            padding: 60px 20px 30px;
         }
 
         footer p.download-title {
-            font-size: 16px;
+            font-size: 15px;
             color: #444444;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             font-weight: 500;
         }
 
         footer .store-btns {
             justify-content: center;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         footer .contact-text {
-            font-size: 15px;
+            font-size: 14px;
             color: #666666;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         footer .contact-text a {
@@ -163,7 +165,7 @@
         }
 
         footer .brand-logo img {
-            height: 48px;
+            height: 45px;
         }
 
         /* RESPONSIVE DESIGN FOR MOBILE */
@@ -171,15 +173,16 @@
             .hero, .feature {
                 flex-direction: column;
                 text-align: center;
-                padding: 40px 0;
+                padding: 30px 0;
             }
 
             .hero-left {
                 text-align: center;
+                padding-top: 0;
             }
 
             .hero-left .logo {
-                margin: 0 auto 20px;
+                margin: 0 auto 18px;
             }
 
             .hero .store-btns, footer .store-btns {
