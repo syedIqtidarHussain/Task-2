@@ -18,58 +18,58 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* TIGHT CONTAINER TO KEEP IMAGES & TEXT CLOSE HORIZONTALLY */
         .container {
-            max-width: 1000px; /* Reduced container width so all elements line up perfectly */
+            max-width: 860px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px 15px;
         }
 
-        /* HERO SECTION - EXACT VERTICAL ALIGNMENT WITH LOWER IMAGES */
+        /* HERO SECTION */
         .hero {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px 0 50px;
+            padding: 10px 0 20px;
+            gap: 20px;
         }
 
         .hero-left {
             flex: 1;
-            max-width: 420px;
+            max-width: 380px;
             text-align: left;
-            padding-left: 20px; /* Exact left offset to align with Channels image border */
         }
 
         .hero-left .logo {
-            width: 240px;
-            margin-bottom: 20px;
+            width: 220px;
+            margin-bottom: 15px;
             display: block;
         }
 
         .hero-left h1 {
-            font-size: 21px;
+            font-size: 20px;
             font-weight: 800;
             letter-spacing: 1.5px;
             color: #1a1a1a;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             text-transform: uppercase;
         }
 
         .hero-left p {
-            font-size: 15px;
+            font-size: 14px;
             color: #666666;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        /* STORE BUTTONS ALIGNMENT */
         .store-btns {
             display: flex;
-            gap: 12px;
+            gap: 10px;
             align-items: center;
             justify-content: flex-start;
         }
 
         .store-btns img {
-            height: 48px;
+            height: 42px;
             width: auto;
             cursor: pointer;
             object-fit: contain;
@@ -77,85 +77,84 @@
         }
 
         .hero-right {
-            flex: 1.1;
+            flex: 1;
             display: flex;
             justify-content: flex-end;
         }
 
         .hero-right img {
             width: 100%;
-            max-width: 480px;
+            max-width: 420px;
         }
 
-        /* FEATURE SECTIONS */
+        /* FEATURE SECTIONS - REDUCED VERTICAL PADDING & COMPACT GAPS */
         .feature {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 40px 0;
-            gap: 30px;
+            padding: 10px 0; /* Reduced vertical gap dramatically */
+            gap: 10px;      /* Reduced horizontal distance between image and text */
         }
 
         .feature-img {
-            flex: 1.1;
+            flex: 1;
             display: flex;
             justify-content: center;
         }
 
         .feature-img img {
             width: 100%;
-            max-width: 460px;
+            max-width: 410px;
         }
 
         .feature-text {
             flex: 0.9;
             text-align: center;
-            padding: 0 10px;
         }
 
         /* HEADINGS */
         .feature-text h2 {
-            font-size: 21px;
+            font-size: 18px;
             font-weight: 700;
-            letter-spacing: 5px;
+            letter-spacing: 4px;
             color: #1a1a1a;
-            margin-bottom: 14px;
+            margin-bottom: 8px;
             text-transform: uppercase;
         }
 
-        /* PARAGRAPH TEXT */
+        /* PARAGRAPH TEXT - 3 LINES MATCHING GREEN DESIGN */
         .feature-text p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #777777;
+            font-size: 14px;
+            line-height: 1.4;
+            color: #888888;
             font-weight: 400;
-            max-width: 300px;
+            max-width: 270px;
             margin: 0 auto;
             text-align: center;
         }
 
-        /* FOOTER */
+        /* FOOTER - COMPACT */
         footer {
             text-align: center;
-            padding: 50px 20px 30px;
+            padding: 30px 20px 20px;
         }
 
         footer p.download-title {
-            font-size: 15px;
+            font-size: 14px;
             color: #444444;
-            margin-bottom: 18px;
+            margin-bottom: 12px;
             font-weight: 500;
         }
 
         footer .store-btns {
             justify-content: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         footer .contact-text {
-            font-size: 14px;
+            font-size: 13px;
             color: #666666;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
         }
 
         footer .contact-text a {
@@ -165,7 +164,7 @@
         }
 
         footer .brand-logo img {
-            height: 45px;
+            height: 40px;
         }
 
         /* RESPONSIVE DESIGN FOR MOBILE */
@@ -173,16 +172,15 @@
             .hero, .feature {
                 flex-direction: column;
                 text-align: center;
-                padding: 30px 0;
+                padding: 15px 0;
             }
 
             .hero-left {
                 text-align: center;
-                padding-left: 0;
             }
 
             .hero-left .logo {
-                margin: 0 auto 18px;
+                margin: 0 auto 15px;
             }
 
             .hero .store-btns, footer .store-btns {
