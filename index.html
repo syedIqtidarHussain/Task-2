@@ -18,17 +18,17 @@
         }
 
         .container {
-            max-width: 1050px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px 20px;
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION - UPER KAR DIYA */
         .hero {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 30px 0 60px;
+            padding: 10px 0 30px;
         }
 
         .hero-left {
@@ -38,7 +38,7 @@
 
         .hero-left .logo {
             width: 220px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             display: block;
         }
 
@@ -53,7 +53,7 @@
         .hero-left p {
             font-size: 15px;
             color: #666666;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .store-btns {
@@ -64,6 +64,7 @@
         .store-btns img {
             height: 42px;
             cursor: pointer;
+            object-fit: contain;
         }
 
         .hero-right {
@@ -74,16 +75,16 @@
 
         .hero-right img {
             width: 100%;
-            max-width: 480px;
+            max-width: 450px;
         }
 
-        /* FEATURE SECTIONS - EXACT MATCH WITH GREEN SAMPLE */
+        /* FEATURE SECTIONS - GAP KAM KAR KE UPER SHIFT KIYA */
         .feature {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 50px 0;
-            gap: 40px;
+            padding: 20px 0; /* Reduced padding from 50px/60px to 20px */
+            gap: 30px;
         }
 
         .feature-img {
@@ -94,56 +95,58 @@
 
         .feature-img img {
             width: 100%;
-            max-width: 460px;
+            max-width: 440px;
         }
 
         .feature-text {
             flex: 0.9;
-            max-width: 380px;
-            text-align: center; /* Original jaisi center alignment */
-        }
-
-        /* HEADINGS (CHANNELS, MESSAGES, IN FUTURE) */
-        .feature-text h2 {
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 5px; /* Spaced text design */
-            color: #1a1a1a;
-            margin-bottom: 14px;
-            text-transform: uppercase;
-        }
-
-        /* PARAGRAPH TEXT */
-        .feature-text p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #888888; /* Soft grey text */
-            font-weight: 400;
-            max-width: 320px;
+            max-width: 260px; /* Tight width for forcing 3 lines */
+            text-align: center;
             margin: 0 auto;
         }
 
-        /* FOOTER */
+        /* HEADINGS */
+        .feature-text h2 {
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: 5px;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* PARAGRAPH TEXT (FORCED 3 LINES MATCH) */
+        .feature-text p {
+            font-size: 15px;
+            line-height: 1.4;
+            color: #888888;
+            font-weight: 400;
+            width: 250px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* FOOTER - COMPACT SPACING */
         footer {
             text-align: center;
-            padding: 60px 20px 30px;
+            padding: 30px 20px 20px;
         }
 
         footer p.download-title {
             font-size: 15px;
             color: #444;
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
 
         footer .store-btns {
             justify-content: center;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         footer .contact-text {
             font-size: 14px;
             color: #666;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
         }
 
         footer .contact-text a {
@@ -153,18 +156,19 @@
         }
 
         footer .brand-logo img {
-            height: 45px;
+            height: 42px;
         }
 
-        /* RESPONSIVE DESIGN FOR MOBILE */
+        /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             .hero, .feature {
                 flex-direction: column;
                 text-align: center;
+                padding: 15px 0;
             }
 
             .hero-left .logo {
-                margin: 0 auto 20px;
+                margin: 0 auto 15px;
             }
 
             .hero .store-btns, footer .store-btns {
@@ -176,7 +180,7 @@
             }
 
             .feature-text {
-                max-width: 100%;
+                max-width: 250px;
             }
         }
     </style>
@@ -208,7 +212,7 @@
             </div>
             <div class="feature-text">
                 <h2>CHANNELS</h2>
-                <p>Enjoy the videos and music you love. Create your own business or entertainment channel.</p>
+                <p>Enjoy the videos and music you love.<br>Create your own business<br>or entertainment channel.</p>
             </div>
         </section>
 
@@ -216,7 +220,7 @@
         <section class="feature reverse">
             <div class="feature-text">
                 <h2>MESSAGES</h2>
-                <p>Communicate seamlessly. Create your own professional or social group chat</p>
+                <p>Communicate seamlessly.<br>Create your own professional<br>or social group chat</p>
             </div>
             <div class="feature-img">
                 <img src="./images/messages_phones.png" alt="Messages">
@@ -230,7 +234,7 @@
             </div>
             <div class="feature-text">
                 <h2>IN FUTURE</h2>
-                <p>Communicate seamlessly. Create your own professional or social group chat</p>
+                <p>Communicate seamlessly.<br>Create your own professional<br>or social group chat</p>
             </div>
         </section>
 
